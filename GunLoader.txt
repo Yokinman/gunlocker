@@ -1,0 +1,67 @@
+				   /loadtext mods\Gunlocker\GunLoader
+			              Load this file for every single weapon in the mod!
+--------------------------------------------------------------------------------------------------------------------------------------------
+Bazooka:
+/loadwep mods\gunlocker\bazooka\bazooka cannon
+
+Blood:
+/loadwep mods\gunlocker\blood\assault blood launcher
+
+Bolt:
+/loadwep mods\gunlocker\bolt\assault crossbow
+/loadwep mods\gunlocker\bolt\auto toxic bow
+/loadwep mods\gunlocker\bolt\minibow
+/loadwep mods\gunlocker\bolt\toxic minibow
+
+Bouncer:
+/loadwep mods\gunlocker\bouncer\bouncer assault rifle
+/loadwep mods\gunlocker\bouncer\bouncer gun
+/loadwep mods\gunlocker\bouncer\bouncer rifle
+
+Bullet:
+/loadwep mods\gunlocker\bullet\bullgun
+
+Disc:
+/loadwep mods\gunlocker\disc\auto disc gun
+/loadwep mods\gunlocker\disc\disc minigun
+/loadwep mods\gunlocker\disc\hyper disc gun
+
+Flame:
+/loadwep mods\gunlocker\flame\auto flare gun
+
+Flame Shell:
+/loadwep mods\gunlocker\flameshell\bonfire
+/loadwep mods\gunlocker\flameshell\campfire
+/loadwep mods\gunlocker\flameshell\flakthrower
+/loadwep mods\gunlocker\flameshell\scorcher
+/loadwep mods\gunlocker\flameshell\toaster
+/loadwep mods\gunlocker\flameshell\vaporizer
+/loadwep mods\gunlocker\flameshell\welder
+
+Grenade:
+/loadwep mods\gunlocker\grenade\alpha launcher
+/loadwep mods\gunlocker\grenade\assault launcher
+/loadwep mods\gunlocker\grenade\grenade cannon
+/loadwep mods\gunlocker\grenade\mega launcher
+/loadwep mods\gunlocker\grenade\super launcher
+
+Heavy Bullet:
+/loadwep mods\gunlocker\heavybullet\heavy smg
+
+Heavy Grenade:
+/loadwep mods\gunlocker\heavygrenade\heavy assault launcher
+
+Laser:
+/loadwep mods\gunlocker\laser\assault laser rifle
+/loadwep mods\gunlocker\laser\laser shotgun
+/loadwep mods\gunlocker\laser\super laser cannon
+
+Melee:
+/loadwep mods\gunlocker\melee\hyper\hyper hammer
+
+Seeker:
+/loadwep mods\gunlocker\seeker\auto seeker shotgun
+
+Shell:
+/loadwep mods\gunlocker\shell\pop pistol
+/loadwep mods\gunlocker\shell\pop minigun
