@@ -11,7 +11,7 @@ return 1; // Bullet Wep
 return 2; // 2 Ammo
 
 #define weapon_area
-return 12; // L0 5-3+
+return 11; // L0 5-2+
 
 #define weapon_load
 return 3; // 0.10 Seconds
@@ -36,7 +36,7 @@ with instance_create(x+lengthdir_x(6,gunangle), y+lengthdir_y(6, gunangle),Heavy
 	creator = other;
 }
 
-weapon_post(4, 4, 6)
+weapon_post(4, 6, 6)
 
 #define weapon_sprt
 return sprHeavySMG; // Wep Sprite

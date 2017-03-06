@@ -14,7 +14,7 @@ return 1; // 1 Ammo
 return 5; // L0 2-1+
 
 #define weapon_load
-return 7; // 0.23 Seconds
+return 6; // 0.20 Seconds
 
 #define weapon_swap
 return sndSwapPistol; // Swap Sound

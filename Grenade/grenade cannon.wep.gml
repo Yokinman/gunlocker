@@ -28,14 +28,14 @@ return 8; // 8 Ammo
 return 13; // L0 6-1+
 
 #define weapon_load
-return 41; // 1.37 Second
+return 50; // 1.67 Second
 
 #define weapon_swap
 return sndSwapExplosive; // Swap Sound
 
 #define weapon_fire
 sound_play(sndHeavyNader); // Sound
-weapon_post(10, -20, 8);
+weapon_post(10, -30, 10);
 
 with instance_create(x - lengthdir_x(1,gunangle), y - lengthdir_y(1,gunangle), CustomProjectile){ // Big Nade
 	on_step = script_ref_create(nade_step);
@@ -100,8 +100,8 @@ with(hitme) if(place_meeting(x,y,other) && team != other.team && my_health > 0){
 	newdmg -= my_health;
 	my_health -= other.damage;
 	with(other){
-		damage = newdmg;
-		trace(damage);
+		if(speed = 0) damage = 0;
+		else damage = newdmg;
 		if(damage <= 0) instance_destroy();
 	}
 }

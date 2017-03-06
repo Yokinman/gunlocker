@@ -20,13 +20,13 @@ return 24; // 0.80 Seconds
 return sndSwapExplosive; //Switch sound
 
 #define weapon_fire
-wkick = 8;
-
  // Sound:
 sound_play(sndHeavyNader);
 sound_play(sndGrenade);
 
- // Fixed Grenade Spread:
+weapon_post(10, -16, 8);
+
+ // Grenades:
 ang = gunangle - (20 * accuracy);
 repeat(5){
 	with instance_create(x,y,Grenade){

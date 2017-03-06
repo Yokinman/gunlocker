@@ -19,7 +19,7 @@ return 8; // 8 Ammo
 return 14; // L0 7-1+
 
 #define weapon_load
-return 40; // 1.33 Seconds
+return 43; // 1.43 Seconds
 
 #define weapon_swap
 return sndSwapExplosive; // Swap Sound
@@ -31,7 +31,7 @@ sound_play(sndRocket);
 
 weapon_post(15, -70, 15);
 
-with(instance_create(x, y, CustomProjectile)){
+with(instance_create(x + lengthdir_x(10,gunangle), y + lengthdir_y(10,gunangle), CustomProjectile)){
 	direction = other.gunangle;
 	image_angle = direction;
 	image_yscale = other.right;

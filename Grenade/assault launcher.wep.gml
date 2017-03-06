@@ -22,7 +22,7 @@ return sndSwapExplosive; // Swap sound
 #define weapon_fire
 repeat(3){
     sound_play(sndGrenade); // Sound
-    weapon_post(5, -5, 4);
+    weapon_post(3, -10, 4);
 
     with instance_create(x,y,Grenade){ // Grenades
         motion_add(other.gunangle + (random_range(-3,3) * other.accuracy),10);

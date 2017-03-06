@@ -24,16 +24,18 @@ return sndSwapMachinegun; // Swap Sound
 
 #define weapon_fire
 sound_play(sndPopgun) // Sound
+weapon_post(2,-6,3);
 
 with instance_create(x,y,Shell){ // Empty Bullet Casing
 	motion_add(other.gunangle + other.right*100 + random_range(-25,25),2+random(2))
 }
 with instance_create(x+lengthdir_x(4,gunangle), y+lengthdir_y(4, gunangle),Bullet2){ // Shell
-	motion_add(point_direction(x,y,mouse_x[other.index],mouse_y[other.index])+((14*random_range(-1, 1))*other.accuracy),15+random(1));
+	motion_add(other.gunangle + (random_range(-14, 14) * other.accuracy),15+random(1));
 	team = other.team;
 	creator = other;
 }
-weapon_post(2,-8,2)
+
+motion_add(gunangle - 180,0.4); // Push Player Backwards A Bit
 
 #define weapon_sprt
 return sprPopMinigun; // Wep Sprite

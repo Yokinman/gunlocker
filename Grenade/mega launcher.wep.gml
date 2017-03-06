@@ -20,11 +20,11 @@ return 54; // 1.80 Seconds
 return sndSwapExplosive; // Swap Sound
 
 #define weapon_fire
-wkick = 20;
-
  // Sound:
 sound_play(sndHeavyNader);
 sound_play(sndClusterLauncher);
+
+weapon_post(14, -32, 16);
 
  // 10 Grenades, Wide Spread:
 ang = gunangle - (45 * other.accuracy);
@@ -37,6 +37,8 @@ repeat(10){
     }
 	ang += 10 * accuracy;
 }
+
+motion_add(gunangle - 180, 6); // Push Player Backwards
 
 #define weapon_sprt
 return global.spr_MegaLaunch; // Wep Sprite

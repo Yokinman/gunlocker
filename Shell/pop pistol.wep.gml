@@ -20,17 +20,18 @@ return 5; // 0.17 Seconds
 return sndSwapPistol; // Swap Sound
 
 #define weapon_fire
-repeat(2) if instance_exists(self){ 
+repeat(2) if instance_exists(self){
+	sound_play(sndPopgun); // Sound
+	weapon_post(3, -4, 4);
+	
 	with instance_create(x,y,Shell){ // Empty Bullet Casings
 		motion_add(other.gunangle + other.right*100 + random_range(-25,25),2+random(2))
 	}
-	with instance_create(x,y,Bullet2){
-		motion_add(point_direction(x,y,mouse_x[other.index],mouse_y[other.index])+((4*random_range(-1, 1))*other.accuracy),15 + random(1));
+	with instance_create(x,y,Bullet2){ // Shells
+		motion_add(other.gunangle + (random_range(-4, 4) * other.accuracy),15 + random(1));
 		team = other.team;
 		creator = other;
 	}
-	sound_play(sndPopgun); // Sound
-	wkick = 3;
 	wait 2;
 }
 

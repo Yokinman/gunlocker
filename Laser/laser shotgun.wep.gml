@@ -47,13 +47,13 @@ with instance_create(x+lengthdir_x(15, gunangle), y+lengthdir_y(15, gunangle) + 
 				image_yscale = 1.7 + (skill_get(17)*0.6);
 				image_angle = ((14*random_range(-1,1)) * creator.accuracy) + creator.gunangle;
 			}
-			creator.wkick = 4;
 			
 			instance_destroy();
 		}
 		wait 1;
 	}
 }
+weapon_post(4, -14, 8);
 
 #define charge_step
 with(LaserCannon) if("lasershotguncharge" in self && instance_exists(creator)){

@@ -21,8 +21,8 @@ return sndSwapExplosive; // Swap sound
 
 #define weapon_fire
 repeat(3) if instance_exists(self){
-    wkick = 8;
     sound_play(sndHeavyNader); // Sound
+	weapon_post(8, -16, 6);
 
     with instance_create(x,y,HeavyNade){ // Heavy Grenades
         motion_add(other.gunangle + (random_range(-3,3) * other.accuracy),10.3 + random(1));
