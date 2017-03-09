@@ -1,5 +1,5 @@
 #define init
-sprBouncerAssaultRifle = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABgAAAANCAYAAACzbK7QAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTJDBGvsAAAAdklEQVQ4T2MYBdQA/7FgqoH/UuJq/3W1zeAYxAeJo2MkcbwAQxPIUD/vWDiGWYJsIYwN1YcXwBWja8YlDmLDMEg/xBj8AMMgbD5AxyB9UIwXYNWMjpEth9EgvRAj8ANkl8AxzGBsckiYIkCSK8kFNLeADMDAAADBZIaJMTxyKAAAAABJRU5ErkJggg==",7,5);
+global.sprBouncerAssaultRifle = sprite_add_weapon("../Sprites/Bouncer/AssaultBouncerRifle.png",7,5);
 
 #define weapon_name
 return "BOUNCER ASSAULT RIFLE"; // Name 
@@ -36,8 +36,8 @@ repeat(3) if instance_exists(self){
 		team = other.team;
 		creator = other;
 	}
-	wait(2)
+	wait 2;
 }
 
 #define weapon_sprt
-return sprBouncerAssaultRifle; // Wep Sprite
+return global.sprBouncerAssaultRifle; // Wep Sprite

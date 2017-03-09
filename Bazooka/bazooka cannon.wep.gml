@@ -1,10 +1,6 @@
-// /loadmod mods/spreadsheet/bazookacannon.wep.gml
-
 #define init
-global.sprBazookaCannon = sprite_add_weapon_base64("iVBORw0KGgoAAAANSUhEUgAAACIAAAAQCAYAAABz9a1kAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADZSURBVEhL1ZDRDcIwEEO7BRID8IP4ZQnECOw/Rqmr+ORcfSVI/amlp7Q+x0k7nUVzY0/MOP6WK5gf92f2LchlXK4BOW/V/H591gKsfFcvQ/96uW1me747CxegurCWYFaRs8qo37pC6w0R0hVgVpGzyi+fa+sKdWF9x3MF5ijULyTwHdyX+kNRyqFurHDFhPMM83hmbiG0CfNZyzM5q8CvMLlQmLqOgKy7ZNXhzloI0dBB9kr0IOJyDch5w6o2Z99xmPKXqro/kXKHXgJyB4xwuPbKdaacUdP0BS4xuTNYnvkvAAAAAElFTkSuQmCC",
-12, 6);
-global.sprBazookaCannonProjectile = sprite_add_base64("iVBORw0KGgoAAAANSUhEUgAAABgAAAAMCAYAAAB4MH11AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QMFASgrkZHVuAAAANRJREFUOMu9k0EKgzAQRX9KDyBoCOYA2Yhb16UX6Fl7gdK1W3HjARSJQm6QbpoQJ2kLxfZDEDKZ98n8CPxLddUAgA3WLjrQjfPpQs2o7JsViZFGBwfnJQDgdr9GN3W1UFpP6Po2YjPX1PWtlUL5al5kAIB1MciLDJyX0HpKwqkRAGfG/IikUGycB39wXczX8DDT46eQ1sVsvuH4UmDa5w3GediMKNgHoJAXmb9RCkjhz2mwKGRn4jIgwUEK5WsvoKkH5MG2rhorhbJ7PdPIYO8f7ed6ABtDcFxdMF4gAAAAAElFTkSuQmCC",
-1, 12, 6);
+global.sprBazookaCannon = sprite_add_weapon("../Sprites/Bazooka/BazookaCannon.png", 12, 6);
+global.sprBazookaCannonProjectile = sprite_add("../Sprites/Projectiles/Bazooka/BigRocket.png", 1, 12, 6);
 
 #define weapon_name
 return "BAZOOKA CANNON"; // Name

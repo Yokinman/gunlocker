@@ -1,5 +1,5 @@
 #define init
-sprSuperLaserCannon = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABwAAAANCAYAAAC6hw6qAAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4AsGFzcK4ZAjMAAAAVJJREFUOMudVDFqw0AQnA1u0ilYIBABSY1UGHfCeUKKtKnzCD0ihZ+RtE6RgB+RdCG4kBurCAaDTYyblJtCd2J1d5KSLAg0w97MnHR7BFXMDCKCWV282TNUWsNUMleSgyfTRItpTuKusKyfi5sFRwVzVDALI55OZhwGKTtCDVVrzZkC5NgtooJbuxv7HsIglZwZwMLTycz6ZFbiMEjxnd+3uMtq3rx/rN4AAFqsDydxhpflY/MrRrIRAA77I/L8CptqjiTO8J49AAASPDc9p+vXmivvfoVljbSJrE1VKq7ECU8N1xgaXB9O4sw2/Esd9kcgFu9AJzaDDhpKcSn4tbwFAJzXB6gXj33PNtzu1s1hkcJj38OnYaZ7AdB2t2Y5m26cWobUMfT1aVu102tBNeRkDLqFiYithaqBQyGqdkKOW4hc19nQ9WcmhZmkS/i/pQP9AK7Jvn8eT4gOAAAAAElFTkSuQmCC",6,6);
+global.sprSuperLaserCannon = sprite_add_weapon("../Sprites/Laser/SuperLaserCannon.png",6,6);
 
 #define weapon_name
 return "SUPER LASER CANNON"; // Name 
@@ -20,7 +20,7 @@ return 230; // 7.66 Seconds
 return sndSwapEnergy; // Swap Sound
 
 #define weapon_fire
-with instance_create(x+lengthdir_x(23, gunangle), y+lengthdir_y(23, gunangle),LaserCannon){
+with instance_create(x, y, LaserCannon){
 	team = other.team;
 	creator = other;
 	damage = 15;
@@ -109,7 +109,7 @@ with(LaserCannon) if("slcannon" in self && instance_exists(creator)){
 }
 
 #define weapon_sprt
-return sprSuperLaserCannon; // Wep Sprite
+return global.sprSuperLaserCannon; // Wep Sprite
 
 #define weapon_text
 return "FIRE WHEN READY"; // Loading Tip

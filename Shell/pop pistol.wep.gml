@@ -1,5 +1,5 @@
 #define init 
-sprPopPistol = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAAA4AAAAHCAYAAAA4R3wZAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AsUFTMbFtiNvAAAAGlJREFUGNNjZMAC7CWFGRTEhBkuc0kw6H57ARe/zCXBcO74IQYGBgYGRiz6/jMQBows6BqMLO0YpGTlGRRU1DFUP7hzk2HLqsUoNv4nxnnINqJoZGBgYDj4/C3cn0h8DC8xYvEXPjHKAQAR+yAJRSbcxwAAAABJRU5ErkJggg==",0,1);
+global.sprPopPistol = sprite_add_weapon("../Sprites/Shell/PopPistol.png",0,1);
 
 #define weapon_name
 return "POP PISTOL"; // Name
@@ -36,7 +36,7 @@ repeat(2) if instance_exists(self){
 }
 
 #define weapon_sprt
-return sprPopPistol; // Wep Sprite
+return global.sprPopPistol; // Wep Sprite
 
 #define weapon_text
 return "I GUESS IT WORKS"; // Loading Tip

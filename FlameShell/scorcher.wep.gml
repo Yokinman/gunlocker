@@ -1,5 +1,5 @@
 #define init 
-sprScorcher = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAAA4AAAAHCAYAAAA4R3wZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABpSURBVChTY8AC/mPD8fpqDEaWdkAmdvD/jwXD//9L+OEYxPfmYcJmGByABQ5pQTTDMIwPMwTEh6oFg/+62mb//bxjwab7hMXCMQ7bQBgMwBpBGMQGYaB/wBjKxwngGsA8CMAmRilgYAAAoAZTGA2l4ZwAAAAASUVORK5CYIIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",0,1);
+global.sprScorcher = sprite_add_weapon("../Sprites/FlameShell/Scorcher.png",0,1);
 
 #define weapon_name
 return "SCORCHER"; // Name
@@ -42,7 +42,7 @@ repeat(2) if instance_exists(self){
 }
 
 #define weapon_sprt
-return sprScorcher; // Wep Sprite
+return global.sprScorcher; // Wep Sprite
 
 #define weapon_text
 return "WARM TO THE TOUCH"; // Loading Tip

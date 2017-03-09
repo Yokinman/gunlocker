@@ -1,5 +1,5 @@
 #define init
-sprVaporizer = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABkAAAARCAYAAAAougcOAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4QMDFzQRjCrRSQAAAW5JREFUOMu9lE1qAkEQhb9OXCcDMxDIalYRFFcJgwSSC4TcIJ5AT+ABPEE8QY4QcgEFSTxAQFezEgQFx2wNnYV2TTnGnwnEgma6q3rq1at+3XAEMzn327/kOMkDsKhCpwTuu6WIjUIKeaovvEOlHBH6ReKvAdBfiy+qyz3KZzRVuwulU4Lbs+X8tHEu/u/nRNbdVsJdM42Zp0TyC5NKOSIMi8TxgOlkhh94tG0/14F1W4kUo4o3AhKGRV7fXiR6fVOjHkPb9rM/bjXNxDaETcokjgdaLdYB12Noz1Mg3aIDmKzJz15eXAEwGg8BeHyooQtwrdNJevN03ZuvM9HnojUuQAB+4Ekbs0DO6iYSn54D3H+mWFrCZjQeKpUtAaeTDwHMJsraL60yu26rrZSjFchMWgig2Wq/k7piIPn33vhVIuPGaDzEDzz8wMMV4mK6RZqAOfCNyu6zWhgr6Zu8b5fJjI24vlP/bXbfk3Q0+wHVO4Vo3v11PwAAAABJRU5ErkJggg==", 5, 7);
+global.sprVaporizer = sprite_add_weapon("../Sprites/FlameShell/Vaporizer.png", 5, 6);
 
 #define weapon_name
 return "VAPORIZER"; // Name
@@ -46,7 +46,7 @@ motion_add(gunangle - 180, 0.4); // Push Player Backwards A Bit
 
 
 #define weapon_sprt
-return sprVaporizer; // Wep Sprite
+return global.sprVaporizer; // Wep Sprite
 
 #define weapon_text
 return "GONE IN AN INSTANT"; // Loading Tip

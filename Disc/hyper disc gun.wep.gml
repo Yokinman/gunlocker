@@ -1,6 +1,6 @@
 #define init 
-sprHyperDiscGun = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4AsGAhENpsdULAAAAMxJREFUKM+VkrEKglAUhr8LzpIUBC1uOkSrPYRQQ669hA/Sk+jo0NzWKg62VIsQFEYvcBrimpoine2c//8uh/NfBQjfUgyUAsQOP8x1pwZBLYjlR5jupg5WWt8jYvmRLOaeLOae1Ixih1L1bUrsUHjlMQBlErDytwAcWFMmQQMQLQKcLzmP+5PxZFTN0uyIoc2zqcP5kgP8GOu9Ud/ncX8CUNxOFDc9dRqa6tvfdDe88pgyCbrPqrMAMPdL0uzYmYmhM2gF1xue+vdrvAHtO1NU5zFjlwAAAABJRU5ErkJggg==",-1,6);
-global.spr_HyperDisc = sprite_add_base64("iVBORw0KGgoAAAANSUhEUgAAABgAAAAMCAYAAAB4MH11AAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAA7CAAAOwgEVKEqAAAAAB3RJTUUH4AsGAi8t3GxvmQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABAklEQVQ4y7WUP2vCQBiHn4izBBIIBIdzSYbiFprJ2bFDdz+GH8KP4d7BgkPnThEXEYdkqYMIQguSL3Ad9NK75k8DJT84OF6e370v73t3UC15X21Vy1sVIL4XAHC+ZHVca143St8LcFzbOOHr86qMpWLa8P3f8EnMDcOQBRBwvmRSSyJ9LyCKYt55auRVAhzXJp8mDN9iw5BPE6J0xus6M+KOa7MLlyX+JOZMxKrge6qakQgBGImQ/WHD/rApYlqfZRMPMAifDb7HP/VxTIu9XpBSH7Bu/YoLw/jh8cd89+iDU3yevjCARt76c8jHRdVNquUnrNhuk1KCzq5p5w+Nrr+Kb2hVlBouLmHQAAAAAElFTkSuQmCC",2,6,6);
+global.sprHyperDiscGun = sprite_add_weapon("../Sprites/Disc/HyperDiscGun.png",-1,5);
+global.spr_HyperDisc = sprite_add("../Sprites/Projectiles/Disc/HyperDisc.png",2,6,6);
 
 #define weapon_name
 return "HYPER DISC GUN"; // Name
@@ -60,7 +60,7 @@ with instance_create(x,y,Disc){ // Hyper Disc
 }
 
 #define weapon_sprt
-return sprHyperDiscGun; // Wep Sprite
+return global.sprHyperDiscGun; // Wep Sprite
 
 #define weapon_text
 return "UNDODGEABLE"; // Loading Tip

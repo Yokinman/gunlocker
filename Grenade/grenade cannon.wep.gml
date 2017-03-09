@@ -1,7 +1,7 @@
 #define init
-global.spr_GrenadeCannon = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABUAAAALCAYAAACQy8Z9AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QMDFige+yD7sgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAAzklEQVQoz2NkwA/+YxFjJKAHr4L/PmGxKAJbVi0mSi8LLpcZWdoxKKioo0gaWdoxSMnKwwz/T8jQ/wwMDAzx+moMDAwMDA9evWX4jEODgoo6g5GlHYOVoxuG3IM7Nxm2rFrMwMLAwPDfXlKYQUFMGG4gpQDu/Qev3jIcfI4w0EgBu4YHd24ynDt+iEFKVh5D7tnjh6iGQg1kRA6OB3duomg6d/wQAwODHYoBxEQUVgOIBRA9DIwsaK78T6IBOF3KiCPt/SdgGCM5iZ/sHAUAmmJDjYP/trMAAAAASUVORK5CYII=",4,3);
-global.spr_BigNade = sprite_add_base64("iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAYAAADED76LAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QMDFyIjWGU1HgAAAGZJREFUGNOFzzEKhDAARNEX8RSCaCHY222zh9/Gzl6wMARyDS1cCyHgbwfmzwQXhzIh4Jg+X03b6YcR7Nsqp2iZfyo8QuiHUdN2oIacopxi0VF5oS4p7h3L/G/IKdq39RHeyvB28wQmQiJQPwmVkAAAAABJRU5ErkJggg==",1,4,4);
-global.spr_BigNadeBlink = sprite_add_base64("iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QMDFyMZh3Ld7QAAADJJREFUKM/tkSESACAMwxL+/+diEIgNM0tV73KNqQBJQhHVU0sOaDe+JC/MYpgvAKc3bgk7Dg1H6fahAAAAAElFTkSuQmCC",2,4,4);
+global.spr_GrenadeCannon = sprite_add_weapon("../Sprites/Grenade/GrenadeCannon.png",4,4);
+global.spr_BigNade = sprite_add("../Sprites/Projectiles/Grenade/BigNade.png",1,4,4);
+global.spr_BigNadeBlink = sprite_add("../Sprites/Projectiles/Grenade/BigNadeBlink.png",2,4,4);
 
  // Slashes:
 global.Slash[0] = Slash;
@@ -35,7 +35,7 @@ return sndSwapExplosive; // Swap Sound
 
 #define weapon_fire
 sound_play(sndHeavyNader); // Sound
-weapon_post(10, -30, 10);
+weapon_post(10, -20, 10);
 
 with instance_create(x - lengthdir_x(1,gunangle), y - lengthdir_y(1,gunangle), CustomProjectile){ // Big Nade
 	on_step = script_ref_create(nade_step);
@@ -79,11 +79,11 @@ if(instance_exists(self)) for(i = 0; i < array_length_1d(global.Shank); i++){
 
 #define nade_wall // Bounce Off Wall
 if(speed > 0){
-	move_bounce_solid(true);		// Bounce
-	image_angle = direction;		// Correct Image Angle
-	speed *= 0.6;					// Less Speed
-	instance_create(x,y,Dust);		// Visual
-	sound_play(sndGrenadeHitWall);	// Sound
+	move_bounce_solid(true);				// Bounce
+	image_angle = direction;				// Correct Image Angle
+	speed *= 0.6;							// Less Speed
+	repeat(3) instance_create(x,y,Dust);	// Visual
+	sound_play(sndGrenadeHitWall);			// Sound
 }
 
 #define nade_hit // When In Contact With An Enemy

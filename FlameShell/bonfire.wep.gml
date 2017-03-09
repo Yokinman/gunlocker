@@ -1,5 +1,5 @@
 #define init 
-sprBonfireGun = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABsAAAAOCAYAAADez2d9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTJDBGvsAAAA2ElEQVQ4T7WQQQrCMBREg2vBpeABXChuxTsUvIG360k8lxCdJBMnv7+hFDrwaP+fdiZt+CkKmys+h1cC93mVpIewnqrnq5f8eLvebWHaKdxb3peM54E4HhJlDvF0PDeFeq8g9PP4BwDM3l49FtcyWzgHgwlmYve4DvtdUwbVwl4p9vARsBR+JTpyVVZT1oPP6a/ClcGEHrILjRaVeeA9hBMeYK4sLXhqL1Cxz3O28CvLXFWDvEInlPJ2lHqNPwnHjnTKVkmDKijQQ4DibaJJadltKpasLAvhC34Ofp+FZceJAAAAAElFTkSuQmCC",5,4);
+global.sprBonfireGun = sprite_add_weapon("../Sprites/FlameShell/Bonfire.png",5,6);
 
 #define weapon_name
 return "BONFIRE"; // Name
@@ -40,7 +40,7 @@ repeat(2){
 motion_add(gunangle - 180,0.7) // Move Player Backwards
 
 #define weapon_sprt
-return sprBonfireGun; // Wep Sprite
+return global.sprBonfireGun; // Wep Sprite
 
 #define weapon_text
 return "BURN THEM ALL"; // Loading Tip

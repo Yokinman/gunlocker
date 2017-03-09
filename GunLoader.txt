@@ -20,6 +20,7 @@ Bouncer:
 
 Bullet:
 /loadwep mods\gunlocker\bullet\bullgun
+/loadwep mods\gunlocker\bullet\double bullgun
 
 Disc:
 /loadwep mods\gunlocker\disc\auto disc gun
@@ -46,10 +47,15 @@ Grenade:
 /loadwep mods\gunlocker\grenade\super launcher
 
 Heavy Bullet:
+/loadwep mods\gunlocker\heavybullet\double heavy bullgun
+/loadwep mods\gunlocker\heavybullet\heavy bullgun
 /loadwep mods\gunlocker\heavybullet\heavy smg
 
 Heavy Grenade:
 /loadwep mods\gunlocker\heavygrenade\heavy assault launcher
+
+Heavy Slug:
+/loadwep mods\gunlocker\heavyslug\heavy gatling slugger
 
 Laser:
 /loadwep mods\gunlocker\laser\assault laser rifle

@@ -1,5 +1,5 @@
 #define init
-sprBouncerGun = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAAAwAAAAKCAYAAACALL/6AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AsUEjoUUuo94QAAAGdJREFUGNNjYCARMGIR+49PHSO6Ij/vWLiq+w9uMly+egpD539dbTO8znj75gODsIgAw+WrpxhY0CVMTMzh/DNnTqLIoThJSlwNpw3PXt7CKv5fV9vsP9Q/6BgOWEgIPey24AhW8gEAJo0lIr2C2/oAAAAASUVORK5CYII=",-2,3);
+global.sprBouncerGun = sprite_add_weapon("../Sprites/Bouncer/BouncerGun.png",-2,3);
 
 #define weapon_name
 return "BOUNCER GUN"; // Name 
@@ -31,7 +31,7 @@ with instance_create(x,y,BouncerBullet){ // Bouncer Bullet
 }
 
 #define weapon_sprt
-return sprBouncerGun; // Wep Sprite
+return global.sprBouncerGun; // Wep Sprite
 
 #define weapon_text
 return "DO A TRICK SHOT"; // Loading Tip

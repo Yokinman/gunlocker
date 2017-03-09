@@ -1,5 +1,5 @@
 #define init 
-sprAssaultCrossbow = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABgAAAAOCAYAAAA1+Nx+AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QEUFhwxXNUJWgAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABT0lEQVQ4y82TsUoDQRCGv1XLBA4ucHCFJs1dcRypvJeIpLS7XjBFSgmKTbBJ6xuksxRtbezShhQXBKNIIJBA3mBt3LtNdhOuUHCanf2HnX9m/ln4Yzv8rUS+F1CtuFQrLjeDAWHzlNHrC6JsgjhKDGw8GcktyMhnAJ1eP/dnbxlPD0MAaeEUgPS9gO7tFZ9fc+7vrgFEp9dXvkFgq0juqH6DBGC+mAII3wuYL6bEUbJBIHdUT7uVGgSPz0NDAxuJ0Ku2VbparnFrDqvlOsfU3a05NOphjr/PsryzOEoYT0Yc6ewAJ1HIxyTLT51EJy3OzIjbRJY6ibKfdtkX07tv1EM1OtFupcUYz85TJbD0vUD6XiC3BJe+F8g4ShS+EYujRLZbaY7rmh0ASkzbn1CkuDVH3xyhJSe9vOC4WWih+9Y11UeiJS671vuBsg//jX0DC6SNH/HoGggAAAAASUVORK5CYII=",5,6);
+global.sprAssaultCrossbow = sprite_add_weapon("../Sprites/Bolt/AssaultCrossbow.png",5,6);
 
 #define weapon_name
 return "ASSAULT CROSSBOW"; // Name
@@ -34,7 +34,7 @@ repeat(3) if instance_exists(self){
 }
 
 #define weapon_sprt
-return sprAssaultCrossbow; // Wep Sprite
+return global.sprAssaultCrossbow; // Wep Sprite
 
 #define weapon_text
 return "POINTY BARRAGE"; // Loading Tip

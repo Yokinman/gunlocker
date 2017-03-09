@@ -1,6 +1,6 @@
 #define init
-sprFlakthrower = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABYAAAAMCAYAAABm+U3GAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7CAAAOwgEVKEqAAAAAB3RJTUUH4QMFAwQXhEsW/wAAAQRJREFUOMvdkjFqw0AQRZ9jt44EKxCoihsFLFS4WUwguYBARao0ewOfwNdxitQGXyCFCW5chLhQ6SIQkEDYbWBTyKtIlpWkjT8sf5id+TP7Wfhv6BxYn8jrH3p0S53R48IEcaSII0UYSADtuT5hIPkcU57n4fcScaQAdBwpk6/BCHfmixnzxYwszfFcH+HYDK6uuReK7sSiO7G4uYQwkOhHq5hw4Nup1WpFFdpzfQCEY7Pur8qL5Q4eMp/tIGG0l6z7q5J7Ly1WHIsajPayMXm5O81tG+swkGRpjnBssjQH4EkktYa7TWFHte79I2noNYQBXt+K5x9vXxH41dKa8B+/4ZniC9DfUzII84ziAAAAAElFTkSuQmCC", 3, 4);
-global.sprFlameFlak = sprite_add_base64("iVBORw0KGgoAAAANSUhEUgAAACAAAAAQCAYAAAB3AH1ZAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QMFAgA70z3VLwAAAMtJREFUSMfNVcERgyAQ3CP/0AcVOHlYUcqhhNgID0uwD3zLXB5hnACnkowZsjM8xOV2D2UhCHAGfLumc+MM9BMIJ4Mk4ctdi+Rg/c+MwBnw0oH5oV+DkY44v3RgZ8C19ar4iXguLBjZK1o0UmNcFs9RmviokS0TzkjbvoX0c+TFUnFhrWS8dHwEeRfWRo4ayIyrs37i/NjWchUa4zQD4/wdV60Pg5aySc6tyH0v1E+gYH18R/LaQSNYXwZZ02P4F0HUMoqbX0bU+jp+AtCjJFcGEajjAAAAAElFTkSuQmCC", 2, 8, 8);
+global.sprFlakthrower = sprite_add_weapon("../Sprites/FlameShell/Flakthrower.png", 4, 4);
+global.sprFlameFlak = sprite_add("../Sprites/Projectiles/FlameShell/FlameFlak.png", 2, 8, 8);
 
 #define weapon_name
 return "FLAKTHROWER"; // Name
@@ -79,7 +79,7 @@ draw_sprite_ext(sprite_index, image_index, x, y, image_xscale * 2, image_yscale 
 draw_set_blend_mode(bm_normal);
 
 #define weapon_sprt
-return sprFlakthrower; // Wep Sprite
+return global.sprFlakthrower; // Wep Sprite
 
 #define weapon_text
 return "ADVANCED FLARES"; // Loading Tip

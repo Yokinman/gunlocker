@@ -1,5 +1,5 @@
 #define init
-global.spr_MegaLaunch = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABwAAAAQCAYAAAAFzx/vAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4QMDFxcsauvqOQAAAUtJREFUOMu9VT9rhDAcfRZXJ+HgBDGD4FC6uLl4H+A6d7t+t9Ktc7/AeYOb0OEGD4eI4B0HNxW62kHjJRqNUumD8Ib8ee8lvyTA/6ECAH3OYAW0kbmaalBv0vPLDmWRw7Kdlhk+P94nx3wYcNRtIK4Hy3YEZs0PQvhBCABK7m5ptVmb+CaPQoKyyJXOLduBZe+kxhgncSQIVpu1CbIygZ8LkF5gbF8nC06F3hPjQLN08kLM1BCzc5ZWKb3eAABPW29WQnYMxPVAsxTE9VrjSVwXqd5NR6837M+1oNEkTOKorU6ZgSSO4AfhYLokjnpb2qZqxDQAFb8wc9tlWUK+n0+nvPi8M5qlgwll1SxL1xPk0nUfhaos8mZy2PLYOd5Ni2vpnNCcl6cHgx5BVibooea3r9PgtdCWuF/7873YxgLoC/4G2mKD/vhbCPgFmjGq+Cj/BiAAAAAASUVORK5CYII=",5,4);
+global.spr_MegaLaunch = sprite_add_weapon("../Sprites/Grenade/MegaLauncher.png",5,6);
 
 #define weapon_name
 return "MEGA LAUNCHER"; // Name 
@@ -14,7 +14,7 @@ return 10; // 10 Ammo
 return 18; // L1 1-1+
 
 #define weapon_load
-return 54; // 1.80 Seconds
+return 47; // 1.57 Seconds
 
 #define weapon_swap
 return sndSwapExplosive; // Swap Sound

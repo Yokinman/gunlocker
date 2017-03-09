@@ -1,5 +1,5 @@
 #define init
-global.spr_AlphaLaunch = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABoAAAANCAYAAAC3mX7tAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7BAAAOwQG4kWvtAAAAB3RJTUUH4QMEEjQj3+F6mwAAAShJREFUOMulk79qwzAQxn8GP4DBhoApJUNwHiMvUJKtWxePxrMHk9FkyBwyZsmWOXv/bF26ZXDJkJRiCLTQN1CXyEi2wEryLUKnu/vuPt056BCNu2OwmeBc6iDmyxUAby/PbDdrANK84LAv6Q+G9SmxmE2xgdskzpJYpHlBfzBkvlyRJTH3dyFA6wQIexF+4AEwmoy1N4ksiVtEAM5iNhUPj09cg6/vyqqjGlIeG8Lfnz8ADvtSs0vpTURCyiGDtpt1/TemZAB+4DGajFuynomcJpFQ9T7uSq3S466s7Sqq0ycQtQpRu1GJRJoXmuPH6/s5STf8wNMm0TTVjolEqcZ2jzrXx23qruracBZhL1Lk6l5Sm803JbmJyL0kQA5KdbpBQ0uIa2P/AZfbdv9AJ8u0AAAAAElFTkSuQmCC",5,4);
+global.spr_AlphaLaunch = sprite_add_weapon("../Sprites/Grenade/AlphaLauncher.png",5,3);
 
 #define weapon_name
 return "ALPHA LAUNCHER"; // Name 

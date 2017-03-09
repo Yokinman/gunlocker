@@ -1,5 +1,5 @@
 #define init 
-sprToaster = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABgAAAALCAYAAABlNU3NAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4AsUFzYyKpk1+wAAAKtJREFUOMtjYBhg8J8AhgNvHibSDT+kxfD/jwXD//9L+OH4jwXEcG8eJqIsZ8RngTcPE0O53D8GKz6E4LFPDAydjxDizDn8cLm/Uz4yHPvEwGB3DWE2I45gYfDzjoULPHn3EM4+d/wQsSHAyMDAwMCCbriuthmDooI6XGDT1sUMPmGxSBYQ9DmmLciGI4PLV0/B1Pw3srRD9gHlFiAZjhJ0RMQdbgvwyI1gAABiykqiwcUfegAAAABJRU5ErkJggg==",5,3);
+global.sprToaster = sprite_add_weapon("../Sprites/FlameShell/Toaster.png",5,2);
 
 #define weapon_name
 return "TOASTER"; // Name
@@ -40,7 +40,7 @@ with instance_create(x,y,FlameShell){ // Flame Shell
 }
 
 #define weapon_sprt
-return sprToaster; // Wep Sprite
+return global.sprToaster; // Wep Sprite
 
 #define weapon_text
 return "DON'T BURN YOURSELF"; // Loading Tip

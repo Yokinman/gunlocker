@@ -1,5 +1,5 @@
 #define init
-sprAssaultBloodLauncher = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABYAAAASCAYAAABfJS4tAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QMDFzQFlvAFNAAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAABIUlEQVQ4y8VUsW3DMBA8Ct5CG7gykMpIkwHUWCNYAyRVCqtmGSALSN6AFQdQQzgNASaFu5Segy5oPZ6yZEu2AT9A3D/AP/4fnwSeZP60JltybUMl17iV/GLFzmjPKvdju0jGsMsUcEYjQ0CZ4moXSY+WZxXtDgFXQRaKBzrxUcXOaKqC+5yQx85ovOdzOKNpVWzfjCc4o2EbRf726xMA8Gd/8PKWE7b2rfaAyiheBBBRxbZRsI1CUdZYvGa9uv2rPR0EAB/5HL9G0xqaoEjnSq59OxXZAHa1bXO6UgjuF2U9eOvLNAopj+dcGjfRJWpxcwDdRU+OGDXHtlF8vIiwKOtul9Nfn0yDfv7k+zv+kIiYE/pHPulb+hUTvs97z3qMHQFePqZZmDVPyAAAAABJRU5ErkJggg==", 4, 7);
+global.sprAssaultBloodLauncher = sprite_add_weapon("../Sprites/Blood/AssaultBloodLauncher.png", 4, 7);
 
 #define weapon_name
 return "ASSAULT BLOOD LAUNCHER"; // Name
@@ -52,4 +52,4 @@ repeat(3) if instance_exists(self){ // Blood Nades
 }
 
 #define weapon_sprt
-return sprAssaultBloodLauncher; // Wep Sprite
+return global.sprAssaultBloodLauncher; // Wep Sprite

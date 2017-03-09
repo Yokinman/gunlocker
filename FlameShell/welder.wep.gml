@@ -1,5 +1,5 @@
 #define init 
-sprWelder = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABIAAAAKCAYAAAC5Sw6hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZdEVYdFNvZnR3YXJlAHBhaW50Lm5ldCA0LjAuMTJDBGvsAAAAlUlEQVQoU32Q0Q2EMAxDuwF7cOIXsQMSG9x2NwlzIQXZ4F5IUyyZpKnzBJQoM6PROmfiXc27RS87lmL7+IA1tt/wPwcQhwAgBAOYVeSU4Z4D2bZ+6ekzc0Fv9VbhCmITQAoKGmsDwgOXgqGXEe5V5W9TdRF9du7Z/RaqCegT0Sscl6BsVnVfdGFR2YxyC4Rcoz7oUikn07ME7Nf1vegAAAAASUVORK5CYII=",3,3);
+global.sprWelder = sprite_add_weapon("../Sprites/FlameShell/Welder.png",3,2);
 
 #define weapon_name
 return "WELDER"; // Name
@@ -44,7 +44,7 @@ repeat(3) if instance_exists(self){
 
 
 #define weapon_sprt
-return sprWelder; // Wep Sprite
+return global.sprWelder; // Wep Sprite
 
 #define weapon_text
 return "HOT TO THE TOUCH"; // Loading Tip

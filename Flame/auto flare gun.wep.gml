@@ -1,5 +1,5 @@
 #define init
-sprAutoFlareGun = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABcAAAALCAYAAACUPhZAAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4AsWASgB86p8ewAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAA3klEQVQoz2NgoCP4D8VUAUzoAmetWBjQLPiPhol2HIbhG17+R7bgf60yMwMyxmIZHOdUtaCYxYJsqzcPE8O5l/8Zzr38z2BkaccgefkIQ4A4I4qGcy+ZGBi9ookKFpjh/40s7RieQzlSsvIMUgwMDP8vH2HY8BIzJJ49fkiS4Shgy6rFcHaTHqqS5rt/GRiOH2JgYGBgqFVmZggQZ2QwPvYH6qhY/BF6DqKRkYCjsMkzIjsKp8uhEcTIwMDwH1uwIPui+S6KZYy4XPAfmxg0hSCChLCv8HoPmy9IUQ8HACxQTkZdVSB9AAAAAElFTkSuQmCC",5,4);
+global.sprAutoFlareGun = sprite_add_weapon("../Sprites/Flame/AutoFlareGun.png",5,4);
 
 #define weapon_name
 return "AUTO FLARE GUN"; // Name 
@@ -33,7 +33,7 @@ with instance_create(x,y,Flare){
 }
 
 #define weapon_sprt
-return sprAutoFlareGun; // Wep Sprite
+return global.sprAutoFlareGun; // Wep Sprite
 
 #define weapon_text
 return "RAPID-FIRE S.O.S."; // Loading Tip

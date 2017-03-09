@@ -1,5 +1,5 @@
 #define init 
-sprAutoToxicBow = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABEAAAAJCAYAAADU6McMAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH4QEIASwKMT6LXwAAALJJREFUKM+VkjEKAjEURN+qhSdIYCtt1iKkW6IH2MIz2noDQbCyS2MrFlbuGaxs5Fvoxt2sER0Ykgz/zw+TwH+QFzsYJIpiBlReJc2CSeWVLO9j2bcYNYSaRs9iR2scelUDMFpcAdgNb71p1jgAjqfD0yTXRaegLOdc6jPTyQwg7OMVYLNdv6+Y60JyXQgg1rjOOcXKq142bUEa40SAvVy+Pqk17mOw7aHZD/+iQRZpofcB4H9jh20GtvUAAAAASUVORK5CYII=",2,3);
+global.sprAutoToxicBow = sprite_add_weapon("../Sprites/Bolt/AutoToxicBow.png",2,3);
 
 #define weapon_name
 return "AUTO TOXIC BOW"; // Name
@@ -31,7 +31,7 @@ with instance_create(x,y,ToxicBolt){ // Toxic Bolt
 }
 
 #define weapon_sprt
-return sprAutoToxicBow; // Wep Sprite
+return global.sprAutoToxicBow; // Wep Sprite
 
 #define weapon_text
 return "GREEN THUMB"; // Loading Tip

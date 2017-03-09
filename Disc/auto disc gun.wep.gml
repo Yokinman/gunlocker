@@ -1,5 +1,5 @@
 #define init 
-sprAutoDiscGun = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABAAAAAICAYAAADwdn+XAAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4AsGAwUyP83EcwAAAKNJREFUKM+Vj0EKgzAURF+KBxBaEFzpRhch21yi0Bv0dL1BoYcoeAGziSshoOAN7MIoabBCH3wImcxkPvxm9nPI6Ui8Xe9EIXM84uB38qwCoHcmDMR2LWVR83w9SPaMSmrKot4ubZcyDhO2awEYhwlYzklYUUntRWiaN+dLGhj2EcCspP562DtDnlVb9ZV1pZXemSUgFLxJBM1EvGLcIBYEf/ABhWc9eP9LDbgAAAAASUVORK5CYII=",2,2);
+global.sprAutoDiscGun = sprite_add_weapon("../Sprites/Disc/AutoDiscGun.png",2,2);
 
 #define weapon_name
 return "AUTO DISC GUN"; // Name
@@ -31,7 +31,7 @@ with instance_create(x,y,Disc){ // Disc
 }
 
 #define weapon_sprt
-return sprAutoDiscGun; // Wep Sprite
+return global.sprAutoDiscGun; // Wep Sprite
 
 #define weapon_text
 return "USE AT YOUR OWN RISK"; // Loading Tip
