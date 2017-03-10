@@ -3,6 +3,7 @@
 --------------------------------------------------------------------------------------------------------------------------------------------
 Bazooka:
 /loadwep mods\gunlocker\bazooka\bazooka cannon
+/loadwep mods\gunlocker\bazooka\hyper bazooka
 
 Blood:
 /loadwep mods\gunlocker\blood\assault blood launcher
@@ -10,6 +11,7 @@ Blood:
 Bolt:
 /loadwep mods\gunlocker\bolt\assault crossbow
 /loadwep mods\gunlocker\bolt\auto toxic bow
+/loadwep mods\gunlocker\bolt\hyper crossbow
 /loadwep mods\gunlocker\bolt\minibow
 /loadwep mods\gunlocker\bolt\toxic minibow
 
