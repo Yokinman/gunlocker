@@ -1,5 +1,5 @@
 #define init
-sprSuperHeavyLauncher = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABkAAAAPCAYAAAARZmTlAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4QIXBjYS2OrCTgAAAVdJREFUOMtjYKA9+M9IjCJKbWEmZIFPWCwDD58Ag7GVHcOMS7cY3t6IhPPVtPUZbl29xOATFsvg5h/G8OfPH4bguFQ4bWbrxHDq8D4GFkKuV1BRh9PramsYFFRQxY0s7RgYGBgYHty5yXDu+CEGKVl5OA0D2Cz5H6+vxsDAwMBwmUsCRSKouYVhXW0NhoZnjx8ynDt+iIGBgYFhy6rFKDQDAwMDIy4LGBgYGBZevMXgExbL8OzxQxSXIfOfPX7IwMDAgMKXkpVHtpgR3QI4hgbZfyNLOzhtsUQIhY+NjQVjBteDV28ZDj5/C3MBSsr6NVUHZwqB+MQOqy9YkIPpwau3eJMuW/YVrBadO36I4dxxGBvTAYzYLMHlEzwAb35jQQ4mNAvwJoyFF28RNBwGmEjNvQ9evWV48Ootg72kMNGlASOW8Cfkuv9QC9B9TV5YElmeMTIMBgAAx0qjKqxZy2kAAAAASUVORK5CYII=", 5, 5)
+global.sprSuperHeavyLauncher = sprite_add_weapon("../Sprites/HeavyGrenade/HeavySuperLauncher.png", 5, 5)
 
 #define weapon_name
 return "SUPER HEAVY LAUNCHER"; // Name
@@ -14,7 +14,7 @@ return 59; // 1.96 Seconds
 return 10; // 10 Ammo
 
 #define weapon_sprt
-return sprSuperHeavyLauncher; // Wep Sprite
+return global.sprSuperHeavyLauncher; // Wep Sprite
 
 #define weapon_area
 return 11; // L0 7-2+
@@ -36,3 +36,6 @@ repeat(5) { //Fire 5 times
     }
 fireAngle += 10 //Change fire angle
 }
+
+#define weapon_text
+return "ANNIHILATOR"; // Loading Tip

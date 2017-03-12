@@ -1,5 +1,5 @@
 #define init
-sprSuperHeavyCrossbow = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABwAAAAQCAYAAAAFzx/vAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4QIXBgwO6UJAeAAAASZJREFUOMtjYKAzYKSSOf+JNZNqFvqExTIwMDAwbFm1GK/ZjGS69j8Webil+CxmwmaaT1gsA1TzfySMAnKqWjAch2QJuhlYffAfzTAGBgYGhgd3bqK7GG6ggoo6w5S2Grw+RdLLiKzwv5S4GgMDAwODsIgA1jB8++YDTrnLV09hiEmJq8HVv33zgeHZy1sMDAwMjEzYDGZgYGCQ11ZHoWEAXVxeW51BSlyNwScslkFX24zBJywWxTJ0T2D4EJsimCOI9T1MPQwY2ZvDg5UFZvGzl7dQLMUWTAwMEHlo8KCAZy+xJz4FFdQQYiGhYPgvLCIAcwgjoTyJbBFywmIhtgTR1Taj2DJsmjHiEhZ3pFoGtYhgafYfDyZUtP3PqWohqJ7uhTfdAQDcf3ujRt60ewAAAABJRU5ErkJggg==", 6, 8)
+global.sprSuperHeavyCrossbow = sprite_add_weapon("../Sprites/HeavyBolt/HeavySuperCrossbow.png", 8, 8)
 
 #define weapon_name
 return "SUPER HEAVY CROSSBOW"; // Name
@@ -14,7 +14,7 @@ return 74; // 2.46 Seconds
 return 10; // 10 Ammo
 
 #define weapon_sprt
-return sprSuperHeavyCrossbow; // Wep Sprite
+return global.sprSuperHeavyCrossbow; // Wep Sprite
 
 #define weapon_area
 return 10; // L0 7-1+
@@ -38,3 +38,6 @@ repeat(5) //Fire 5 times
     fireAngle += 10 //Change fire angle
 }
 wkick = 4;
+
+#define weapon_text
+return "HARD TO CARRY"; // Loading Tip

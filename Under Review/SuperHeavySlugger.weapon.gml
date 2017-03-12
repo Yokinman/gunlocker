@@ -1,5 +1,5 @@
 #define init
-sprSuperHeavySlugger = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABYAAAAQCAYAAAAS7Y8mAAAABmJLR0QAXwAvACaiHGdFAAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4QEPCg8qJXsLrgAAAQxJREFUOMvNlDEKwjAUhr9KbyAIFko7iA4OQjcdFBcnZzfxIs6ewAt4DRfRQTfBsdKhIigITh6gDjYhqVarIvgg5PFKvrz8+Rv484jiISP3xqJng26vjwo3X0G9ehPLdgBwSxWWsymNdgdA5svZFLdU0RaaWaEAYeBrc1oNwEg5OgBevfmW0OvVQjKT4GhQK986OJ25uFUs2+Gw32HZjjxuGPh3uZjHoyGAoV5e1CrmtV1UWFLDV2GqULeQl93Oj2e8/e5OS4CDUhe5WlOlkGABjb9Fn+qsuSIB1SQRcmTRV7NbDJSdqmBxeWHgZ5IhzW4P/fyt3Z791loIB4kLn2y2Gs/44tF5FMbPn7srn2iIYt1ZZckAAAAASUVORK5CYII=", 5, 8)
+global.sprSuperHeavySlugger = sprite_add_weapon("../Sprites/HeavySlug/HeavySuperSlugger.png", 5, 8)
 
 #define weapon_name
 return "SUPER HEAVY SLUGGER"; // Name
@@ -14,7 +14,7 @@ return 72; // 2.40 Seconds
 return 10; // 10 Ammo
 
 #define weapon_sprt
-return sprSuperHeavySlugger; // Wep Sprite
+return global.sprSuperHeavySlugger; // Wep Sprite
 
 #define weapon_area
 return 10; // L0 5-2+
@@ -39,3 +39,6 @@ repeat(5) //Fire 5 times
     fireAngle += 15 //Change fireangle
 }
 wkick = 4;
+
+#define weapon_text
+return "SHORT RANGE HIGH DAMAGE"; // Loading Tip
