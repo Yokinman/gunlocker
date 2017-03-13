@@ -1,4 +1,4 @@
-// /loadmod mods/spreadsheet/seekercannon.wep.gml
+// /loadmod mods/gunlocker/Under Review/seekercannon.wep.gml
 
 #define init
 global.sprSeekerCannon = sprite_add_weapon_base64("iVBORw0KGgoAAAANSUhEUgAAABYAAAAOCAYAAAArMezNAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAC7SURBVDhP1ZOxDUIxDESzAxUL0CLR0cAC1HSIBZiAmooBKFnV/DtywTj/h1BQ8KST7cQ5+yOR/gozy1kNbrx6aPbzYrc/2Ol8YdzOZ/7BmAB7IeTPoxd2XC4qwdgP8hHCOyjUhAUMYKQGyBtfb/cqKl+tN6XOfoSPZRz1aeMuYwg1FI2npH4NyjWJpqCcSRqiiJ4sEAcV4kHcYEw+A+93YtgkZ6T6zYZtqB6af5CpT+uhZQxk+rXxD0npAR0P/Ft9xMQ1AAAAAElFTkSuQmCC",
@@ -24,6 +24,7 @@ sc_fire(x+lengthdir_x(24, gunangle), y+lengthdir_y(24, gunangle), gunangle);
 var sc = instance_create(x, y, CustomProjectile);
 with(sc)
 {
+	name = "seekercannon";
 	direction = dir;
 	team = other.team;
 	creator = other;
