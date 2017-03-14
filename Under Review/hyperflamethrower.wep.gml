@@ -1,4 +1,4 @@
-// /loadmod mods/spreadsheet/hyperflamethrower.wep.gml
+// /loadmod mods/gunlocker/under review/hyperflamethrower.wep.gml
 
 #define init
 global.sprHyperFlamethrower = sprite_add_weapon_base64("iVBORw0KGgoAAAANSUhEUgAAABYAAAAPCAYAAADgbT9oAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACvSURBVDhPxVBBDsIwDOsXdkLishsXtCufmHgCn+Bd/LHIaR3MlqFWIGbJirM5btr0b+QGdiOP9+wc5keo4Sv2dnjAVig0fMXeDhvkcKTZw1wr9Qr86YwCqdWHG1Qdwq85nS/5Ot+cWz0rDlqErw4x06dg6OPhZBV+UnqA9Q0+SGoQn0SeA6BWhrCfsoWRVybr927YpqilfYUHG3dBgz30FxsDOuzh3268BIOUeyClJ3hN9aNqmKR2AAAAAElFTkSuQmCC",

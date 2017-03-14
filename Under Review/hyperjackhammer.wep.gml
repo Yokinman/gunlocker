@@ -1,4 +1,4 @@
-// /loadmod mods/spreadsheet/hyperjackhammer.wep.gml
+// /loadmod mods/gunlocker/under review/hyperjackhammer.wep.gml
 
 #define init
 global.sprHyperJackhammer = sprite_add_weapon_base64("iVBORw0KGgoAAAANSUhEUgAAABQAAAANCAYAAACpUE5eAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACpSURBVDhPrZAxDsIwDEVzBSakLmwsiJVLVOIGXIJzcce0z823LDcMDTzpq67rvCQtKzXlZ+rlXT28hwxTT/PHpdSEfssQLory++0xLLZF0/lqEiLxc35Z2kyPXd8WSyaBxLHHbArE2vDraWGOxMxqjieH0E34ZraV3Qk1HH8BNbMpEGvHmpIQNtFGQdaj2/ej60mC6JusiwskJPRbDuGCJDksEn+RbJSyAEl/ydWWefQRAAAAAElFTkSuQmCC",
