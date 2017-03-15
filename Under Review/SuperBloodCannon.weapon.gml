@@ -80,6 +80,7 @@ repeat(6) { //Fire 6 times
 #define weapon_fire
 //Create big meatball:
 with (instance_create(x,y,CustomProjectile)) {
+	name = "bigbloodball";
     //Set some shit
     creator = other;
     team = other.team;

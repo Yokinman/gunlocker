@@ -94,6 +94,7 @@ sound_play(sndDoubleFireShotgun);
 qDir = 0 //Direction
 repeat(5) { //Fire 5 projectiles
     with (instance_create(x,y,CustomProjectile)) { //Flame flaks
+		name = "flameflak";
 		motion_add(other.qDir,11+random(2));
         image_angle = direction;
 		friction = 0.4;
@@ -140,6 +141,7 @@ sound_play(sndFireShotgun)
 pointing = point_direction(x, y, mouse_x[index], mouse_y[index]) //Short point_direction variable
 
 with (instance_create(x+lengthdir_x(14, other.pointing),y+lengthdir_y(14, other.pointing),CustomProjectile)) { //Create super flak
+	name = "superflameflak";
     //Set some shit
     creator = other;
     friction = 0.4
