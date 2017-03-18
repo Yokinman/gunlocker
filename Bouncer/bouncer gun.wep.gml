@@ -8,7 +8,7 @@ return "BOUNCER GUN"; // Name
 return 1; // Bullet Wep
 
 #define weapon_area
-return 5; // L0 2-1+
+return 4; // L0 1-3+
 
 #define weapon_load
 return 5; // 0.17 Seconds

@@ -9,7 +9,7 @@ return "BAZOOKA CANNON"; // Name
 return 4; // Explosive Wep
 
 #define weapon_cost
-return 8; // 8 Ammo
+return 6; // 6 Ammo
 
 #define weapon_area
 return 14; // L0 7-1+

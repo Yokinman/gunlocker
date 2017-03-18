@@ -8,7 +8,7 @@ global.sprHyperHammerEND = sprite_add("../../Sprites/Projectiles/Melee/Hyper/Hyp
 return "HYPER HAMMER"; // Name
 
 #define weapon_area
-return 24; // L1 3-3+
+return 19; // L1 1-2+
 
 #define weapon_load
 return 15; // 0.50 Seconds
@@ -26,7 +26,7 @@ wepangle = -wepangle; // Flip Wep To Other Side
 
  // Heavy Hyper Swingaroo:
 with(instance_create(x, y, CustomProjectile)){
-	motion_add(other.gunangle,2 + (skill_get(13)*2));
+	motion_add(other.gunangle,2 + (skill_get(13)*3));
 	friction = 0.10;
 	image_angle = direction;
 	team = other.team;
@@ -37,13 +37,12 @@ with(instance_create(x, y, CustomProjectile)){
 	tries = 90 + (skill_get(13)*50);
 	
 	on_hit = hh_hit;
-	on_step = hh_step;
 	
 	var trail1 = instance_create(x, y, CustomObject);
 	with(trail1){
 		sprite_index = global.sprHyperHammerBGN;
 		image_speed = 0.4;
-		motion_add(other.direction,2 + (skill_get(13)*2));
+		motion_add(other.direction,2 + (skill_get(13)*3));
 		friction = 0.10;
 		image_angle = direction;
 	}
@@ -52,7 +51,7 @@ with(instance_create(x, y, CustomProjectile)){
 	with(trail2){
 		sprite_index = global.sprHyperHammerMID;
 		image_speed = 0.4;
-		motion_add(other.direction,2 + (skill_get(13)*2));
+		motion_add(other.direction,2 + (skill_get(13)*3));
 		friction = 0.10;
 		image_angle = direction;
 	}
@@ -61,7 +60,7 @@ with(instance_create(x, y, CustomProjectile)){
 	with(trail3){
 		sprite_index = global.sprHyperHammerEND;
 		image_speed = 0.4;
-		motion_add(other.direction,2 + (skill_get(13)*2));
+		motion_add(other.direction,2 + (skill_get(13)*3));
 		friction = 0.10;
 		image_angle = direction;
 	}
@@ -79,7 +78,6 @@ with(instance_create(x, y, CustomProjectile)){
 	}
 	
 	while(instance_exists(self) && tries > 0){
-		script_ref_call(hh_step);
 		tries -= 1;
 		
 		if(distance_to_object(Portal) > 0){
@@ -150,10 +148,8 @@ with(instance_create(x, y, CustomProjectile)){
 	
 	instance_destroy();
 }
-motion_add(direction, pdist + (skill_get(13)*pdist));
+motion_add(direction, (2*pdist) * (skill_get(13)+3));
 weapon_post(8, pdist * 1.5, 15);
-
-#define hh_step
 
 #define hh_hit
 

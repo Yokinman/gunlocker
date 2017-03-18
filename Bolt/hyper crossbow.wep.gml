@@ -1,5 +1,6 @@
 #define init
 global.sprHyperCrossbow = sprite_add_weapon("../Sprites/Bolt/HyperCrossbow.png", 2, 4);
+global.sprHyperBolt = sprite_add("../Sprites/Projectiles/Bolt/HyperBolt.png", 1, 8, 4);
 
 #define weapon_name
 return "HYPER CROSSBOW"; // Name
@@ -11,10 +12,13 @@ return 3; // Bolt Wep
 return 2; // 2 Ammo
 
 #define weapon_area
-return 16; // L0 7-3+
+return 15; // L0 7-2+
 
 #define weapon_load
 return 10; // 0.33 Seconds
+
+#define weapon_swap
+return sndSwapBow; // Swap Sound
 
 #define weapon_fire
  // Sound:
@@ -46,6 +50,7 @@ with(instance_create(x + lengthdir_x(4,gunangle), y + lengthdir_y(4,gunangle), C
 				if("homed" not in self || homed != dir){
 					homed = dir;
 					with instance_create(x,y,BoltTrail){ // Trail
+						image_angle = other.direction;
 						image_xscale = point_distance(other.x,other.y,dir.x,dir.y);
 						image_yscale = 1.4 + (point_distance(other.x,other.y,other.xstart,other.ystart)/360);
 						if(image_yscale > 2) image_yscale = 2;
@@ -59,14 +64,14 @@ with(instance_create(x + lengthdir_x(4,gunangle), y + lengthdir_y(4,gunangle), C
 
 		 // Trail:
 		with instance_create(x,y,BoltTrail){
-			image_yscale = 1.4 + (point_distance(other.x,other.y,other.xstart,other.ystart)/360);
+			image_angle = other.direction;
+			image_yscale = 1.4 + (point_distance(x,y,other.xstart,other.ystart)/360);
 			if(image_yscale > 2) image_yscale = 2;
 		}
 		
 		 // Hurt Enemies:
 		if(place_meeting(x,y,hitme)) with(hitme){
 			if(team != other.team && distance_to_object(other) <= 0){
-				direction = other.direction;
 				
 				 // Sound:
 				sound_play(snd_hurt);
@@ -82,16 +87,19 @@ with(instance_create(x + lengthdir_x(4,gunangle), y + lengthdir_y(4,gunangle), C
 				 // Stick In Enemies:
 				if(my_health > 0){
 					other.tries = 0;
-					with(enemy) speed += 8;
+					if(object_index = enemy) speed += 8;
 					with(other){
 						var pointhere = point_direction(creator.x,creator.y,x,y);
 						tries = 0;
 					}
 					with instance_create(x,y,BoltStick){
 						target = other;
+						sprite_index = global.sprHyperBolt;
 						image_angle = pointhere;
 					}
 				}
+				
+				direction = pointhere;
 			}
 		}
 		
@@ -99,10 +107,11 @@ with(instance_create(x + lengthdir_x(4,gunangle), y + lengthdir_y(4,gunangle), C
 		if(place_meeting(x,y,Wall)){
 			tries = 0;
 			sound_play(sndBoltHitWall);
-			with(instance_create(x + lengthdir_x(8, direction), y + lengthdir_y(8, direction), Bolt)){
+			with(instance_create(x + lengthdir_x(7, direction), y + lengthdir_y(7, direction), Bolt)){
 				team = other.team;
 				direction = other.direction;
 				image_angle = direction;
+				sprite_index = global.sprHyperBolt;
 				alarm0 = 30;
 			}
 		}
@@ -117,10 +126,10 @@ with(instance_create(x + lengthdir_x(4,gunangle), y + lengthdir_y(4,gunangle), C
 		}
 	}
 	
-	 // Collided With Something:
+	 // After Colliding With Something:
 	view_shake_at(x, y, 4);
 	repeat(5) with instance_create(x + lengthdir_x(8, direction),y + lengthdir_y(8, direction),Dust){
-		motion_add((direction - 90) * choose(1, -1), 2 + random(2));
+		motion_add((other.direction + (90 * choose(1, -1))) + random_range(-10,10), 2 + random(1));
 	}
 	instance_destroy();
 }

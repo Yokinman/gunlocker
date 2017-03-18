@@ -1,4 +1,4 @@
-// /loadmod mods/gunlocker/under review/hypersword.wep.gml
+// /loadmod mods/spreadsheet/hypersword.wep.gml
 
 #define init
 global.sprHyperSword = sprite_add_weapon_base64("iVBORw0KGgoAAAANSUhEUgAAAB0AAAALCAYAAACDHIaJAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACLSURBVDhPYyAD/EfCNAdgi+SL/oMxlE8zALZA0HsN2DIQDRWjGQBboqttBsZ0sRAWlDCLqW0pzDA4RrYMmzyFGBFfyMEIsxCE/bxjcdLEYFiIgTDcUnQMUwCyWEpcDS+GOQwXRjYLaj5OAPc9iE0IozsCphfNMhAmCIhyHRQgG4wNkwTI0oQfMDAAABCU2NFuFgwnAAAAAElFTkSuQmCCAAAAAAAAAAAAAA==",

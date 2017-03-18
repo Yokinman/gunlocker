@@ -32,7 +32,7 @@ repeat(5){
 	with instance_create(x,y,Grenade){
 		team = other.team;
 		creator = other;
-		motion_set(creator.ang, 10);
+		motion_set(creator.ang + random_range(-3,3), 10);
 		image_angle = direction;
 	}
 	ang += 10 * accuracy;

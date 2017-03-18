@@ -8,7 +8,7 @@ return "MINIBOW"; // Name
 return 3; // Bolt Wep
 
 #define weapon_area
-return 18; // L1 1-1+
+return 16; // L0 7-3+
 
 #define weapon_load
 return 3; // 0.10 Seconds

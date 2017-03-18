@@ -11,7 +11,7 @@ return 4; // Explosive Wep
 return 3; // 3 Ammo
 
 #define weapon_area
-return 16; // L0 7-3+
+return 15; // L0 7-2+
 
 #define weapon_load
 return 8; // 0.27 Seconds
@@ -24,7 +24,7 @@ return sndSwapExplosive; // Swap sound
 sound_play(sndRocket);
 sound_play(sndHyperLauncher);
 
-weapon_post(8, 20, 4);
+weapon_post(8, -30, 4);
 
  // Smoke Effect:
 repeat(8) with instance_create(x+lengthdir_x(24, gunangle), y+lengthdir_y(24, gunangle), Smoke){
@@ -52,6 +52,8 @@ with(instance_create(x,y,CustomProjectile)){
 		
 		if(place_meeting(x,y,hitme)) with instance_nearest(x,y,hitme){
 			if(team != other.team && place_meeting(x,y,other)){
+				direction = other.direction;
+
 				 // Hurt Frames:
 				image_index = 0;
 				sprite_index = spr_hurt;
@@ -93,4 +95,4 @@ with(instance_create(x,y,CustomProjectile)){
 return global.sprHyperBazooka; // Wep Sprite
 
 #define weapon_text
-return "THIS HITS LIKE A VAN"; // Loading Tip
+return "SKULL BUSTIN'"; // Loading Tip

@@ -30,7 +30,7 @@ weapon_post(14, -32, 16);
 ang = gunangle - (45 * other.accuracy);
 repeat(10){
     with instance_create(x,y,Grenade){
-        motion_set(other.ang, 10);
+        motion_set(other.ang + random_range(-3,3), 10);
         image_angle = direction;
         team = other.team;
 		creator = other;

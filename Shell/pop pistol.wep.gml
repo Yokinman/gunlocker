@@ -7,11 +7,8 @@ return "POP PISTOL"; // Name
 #define weapon_type
 return 1; // Bullet Wep
 
-#define weapon_cost
-return 1; // 1 Ammo
-
 #define weapon_area
-return 4; // L0 1-3+
+return 3; // L0 1-2+
 
 #define weapon_load
 return 5; // 0.17 Seconds

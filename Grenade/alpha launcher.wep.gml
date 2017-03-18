@@ -11,10 +11,10 @@ return 4; // Explosive Wep
 return 5; // 5 Ammo
 
 #define weapon_area
-return 13; // L0 6-1+
+return 14; // L0 7-1+
 
 #define weapon_load
-return 11; // 0.37 Seconds
+return 10; // 0.33 Seconds
 
 #define weapon_swap
 return sndSwapExplosive; // Swap Sound
@@ -30,10 +30,10 @@ sound_play(sndGrenade);
 weapon_post(8, -6, 8);
 
  // Nades:
-ang = gunangle - (15 * accuracy);
-repeat (4){
+var ang = gunangle - (15 * accuracy);
+repeat(4){
     with instance_create(x,y,Grenade){
-        motion_set(other.ang, 10);
+        motion_set(ang + random_range(-3,3), 10);
         image_angle = direction;
         team = other.team;
 		creator = other;

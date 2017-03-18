@@ -50,7 +50,10 @@ Grenade:
 
 Heavy Bullet:
 /loadwep mods\gunlocker\heavybullet\double heavy bullgun
+/loadwep mods\gunlocker\heavybullet\double heavy minigun
 /loadwep mods\gunlocker\heavybullet\heavy bullgun
+/loadwep mods\gunlocker\heavybullet\heavy hyper rifle
+/loadwep mods\gunlocker\heavybullet\heavy minigun
 /loadwep mods\gunlocker\heavybullet\heavy smg
 
 Heavy Grenade:
@@ -66,6 +69,13 @@ Laser:
 
 Melee:
 /loadwep mods\gunlocker\melee\hyper\hyper hammer
+/loadwep mods\gunlocker\melee\hyper\hyper jackhammer
+
+Nuke:
+/loadwep mods\gunlocker\nuke\hyper nuke launcher
+
+Plasma:
+/loadwep mods\gunlocker\plasma\hyper plasma rifle
 
 Seeker:
 /loadwep mods\gunlocker\seeker\auto seeker shotgun
@@ -73,3 +83,9 @@ Seeker:
 Shell:
 /loadwep mods\gunlocker\shell\pop pistol
 /loadwep mods\gunlocker\shell\pop minigun
+
+Slug:
+/loadwep mods\gunlocker\slug\alpha slugger
+
+Splinter:
+/loadwep mods\gunlocker\splinter\porcupine

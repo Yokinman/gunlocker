@@ -35,7 +35,7 @@ return sndSwapExplosive; // Swap Sound
 
 #define weapon_fire
 sound_play(sndHeavyNader); // Sound
-weapon_post(10, -20, 10);
+weapon_post(10, -30, 5);
 
 with instance_create(x - lengthdir_x(1,gunangle), y - lengthdir_y(1,gunangle), CustomProjectile){ // Big Nade
 	on_step = script_ref_create(nade_step);

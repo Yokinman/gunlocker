@@ -28,18 +28,25 @@ sound_play(sndFireShotgun);
 weapon_post(8, -30, 5);
 
 with (instance_create(x, y, CustomProjectile)){ // Flame Flak
-	motion_add(other.gunangle + (random_range(-2, 2) * other.accuracy), 11 + random(2));
+	motion_add(other.gunangle + (random_range(-6, 6) * other.accuracy), 11 + random(2));
 	image_angle = direction;
 	friction = 0.4;
 	sprite_index = global.sprFlameFlak;
 	mask_index = mskFlakBullet;
 	team = other.team;
 	creator = other;
-	damage = 8;
+	damage = 10;
+	bonus = 1;
 	typ = 1;
 	on_step = script_ref_create(flame_flak_on_step);
 	on_destroy = script_ref_create(flame_flak_on_destroy);
 	on_draw = script_ref_create(flame_flak_on_draw);
+	
+	while(instance_exists(self) && bonus = 1){
+		wait 3;
+		bonus = 0;
+		damage -= 2;
+	}
 }
 
 #define flame_flak_on_step
