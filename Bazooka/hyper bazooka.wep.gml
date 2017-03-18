@@ -34,6 +34,7 @@ repeat(8) with instance_create(x+lengthdir_x(24, gunangle), y+lengthdir_y(24, gu
 
  // Fire Hyper Rocket:
 with(instance_create(x,y,CustomProjectile)){
+	name = "hyperrocket";
 	direction = other.gunangle + (random_range(-2,2) * other.accuracy);
 	image_angle = direction;
 	sprite_index = sprRocket;

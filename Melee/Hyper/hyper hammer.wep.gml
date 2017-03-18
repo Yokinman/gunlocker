@@ -26,6 +26,7 @@ wepangle = -wepangle; // Flip Wep To Other Side
 
  // Heavy Hyper Swingaroo:
 with(instance_create(x, y, CustomProjectile)){
+	name = "hyperslash";
 	motion_add(other.gunangle,2 + (skill_get(13)*3));
 	friction = 0.10;
 	image_angle = direction;

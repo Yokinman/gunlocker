@@ -24,6 +24,7 @@ sc_fire(x+lengthdir_x(24, gunangle), y+lengthdir_y(24, gunangle), gunangle);
 var sc = instance_create(x, y, CustomProjectile);
 with(sc)
 {
+	name = "seekerball";
 	direction = dir;
 	team = other.team;
 	creator = other;

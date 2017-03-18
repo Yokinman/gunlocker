@@ -29,6 +29,7 @@ repeat(16) with instance_create(x+lengthdir_x(24, gunangle), y+lengthdir_y(24, g
 }
 
 with instance_create(x, y, CustomProjectile){
+	name = "hypernuke";
 	direction = other.gunangle;
 	image_angle = direction;
 	damage = 70;

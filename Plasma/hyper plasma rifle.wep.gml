@@ -48,6 +48,7 @@ repeat(16) with instance_create(x + lengthdir_x(18-wkick, gunangle), y + lengthd
 
  // Hyper Plasma Ball:
 with instance_create(x+lengthdir_x(24, gunangle), y+lengthdir_y(24, gunangle), CustomProjectile){
+	name = "hyperplasma";
 	direction = other.gunangle;
 	image_angle = direction;
 	tries = 3200;

@@ -38,6 +38,7 @@ sound_play(sndHeavyNader); // Sound
 weapon_post(10, -30, 5);
 
 with instance_create(x - lengthdir_x(1,gunangle), y - lengthdir_y(1,gunangle), CustomProjectile){ // Big Nade
+	name = "bignade";
 	on_step = script_ref_create(nade_step);
 	on_wall = script_ref_create(nade_wall);
 	on_hit = script_ref_create(nade_hit);

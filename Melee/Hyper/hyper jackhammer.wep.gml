@@ -27,6 +27,7 @@ repeat(10) if instance_exists(self){
 	sound_play(sndHyperRifle);
 	
 	with instance_create(x, y, CustomProjectile){
+		name = "hypershank";
 		motion_add(other.gunangle + (random_range(-15, 15) * other.accuracy), 5 + (skill_get(13)*3));
 		image_angle = direction;
 		team = other.team;

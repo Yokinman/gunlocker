@@ -28,6 +28,7 @@ sound_play(sndRocket);
 weapon_post(15, -70, 15);
 
 with(instance_create(x + lengthdir_x(10,gunangle), y + lengthdir_y(10,gunangle), CustomProjectile)){
+	name = "bigrocket";
 	direction = other.gunangle;
 	image_angle = direction;
 	image_yscale = other.right;
