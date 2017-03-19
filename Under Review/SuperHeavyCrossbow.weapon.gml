@@ -17,7 +17,7 @@ return 10; // 10 Ammo
 return global.sprSuperHeavyCrossbow; // Wep Sprite
 
 #define weapon_area
-return 10; // L0 7-1+
+return 10; // L0 5-2+
 
 #define weapon_swap
 return sndSwapBow; // Swap sound

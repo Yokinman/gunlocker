@@ -17,7 +17,7 @@ return 10; // 10 Ammo
 return global.sprSuperHeavyLauncher; // Wep Sprite
 
 #define weapon_area
-return 11; // L0 7-2+
+return 14; // L0 7-2+
 
 #define weapon_swap
 return sndSwapExplosive; // Swap Sound

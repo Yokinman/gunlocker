@@ -35,7 +35,7 @@ return 12; // 12 Ammo
 return global.sprSuperBloodCannon; // Wep Sprite
 
 #define weapon_area
-return 12; // L0 7-3+
+return 15; // L0 7-3+
 
 #define weapon_swap
 return sndSwapExplosive; // Swap sound
