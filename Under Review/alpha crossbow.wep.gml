@@ -44,4 +44,6 @@ repeat(4){
 	fireAngle += (10 * other.accuracy);
 }
 
+wkick = 7
+
 motion_add(gunangle - 180, 1.5); // Push Player Backwards

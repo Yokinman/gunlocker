@@ -26,6 +26,10 @@ return sndSwapDragon; // Swap Sound
 return 1; // Automatic
 
 #define weapon_fire
+wkick = 4
+
+//INSERT GOOD CODE THAT FIXES SOUND HERE PLEASE
+
 repeat(6) {
 	if instance_exists(self) {
 		fireAngle = -7.5-2+random(4)
@@ -43,6 +47,5 @@ repeat(6) {
 		}
 	}
 	wait 1;
+	wkick = 4
 }
-
-wkick = 4
