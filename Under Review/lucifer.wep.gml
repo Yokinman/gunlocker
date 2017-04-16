@@ -38,7 +38,7 @@ repeat(6) {
 			{
 				with instance_create(x,y,Flame) {
 					creator = other
-					motion_add(point_direction(x,y,mouse_x,mouse_y)+random(10)-other.fireAngle,10+random(3))
+					motion_add(other.gunangle+random(10)-other.fireAngle,10+random(3))
 					team = other.team
 					move_contact_solid(direction,14)
 				}

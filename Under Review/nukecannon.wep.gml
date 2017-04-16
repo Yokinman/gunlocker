@@ -44,7 +44,7 @@ instance_create(x,y,Smoke)
 if speed > 5
 speed = 5
 
-motion_add(point_direction(x,y,mouse_x,mouse_y),0.1) //Can be controlled
+motion_add(point_direction(x,y,mouse_x[creator.index],mouse_y[creator.index]),0.1) //Can be controlled
 motion_add(direction,0.1)
 }
 
@@ -73,13 +73,11 @@ repeat(16) {
 //Fire sounds
 sound_play(sndRocket)
 
-pointing = point_direction(x, y, mouse_x[index], mouse_y[index]) //Shorter variable for point_direction
-
 view_shake_at(x,y,8); // Screen shake
 wkick = 10;
 
 //Create big nuke
-with (instance_create(x+lengthdir_x(8, other.pointing),y+lengthdir_y(8, other.pointing),CustomProjectile)) {
+with (instance_create(x+lengthdir_x(8, other.gunangle),y+lengthdir_y(8, other.gunangle),CustomProjectile)) {
 	name = "bignuke";
 	sound_play(sndRocketFly) //Some sound
 	//Set some shit:

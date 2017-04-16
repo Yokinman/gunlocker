@@ -38,7 +38,7 @@ repeat(7) {
 		image_speed = 0 // Set animation speed
 		name = "miniplasma" // Set name for compatability
 		creator = other // Set creator
-		motion_add(point_direction(x,y,mouse_x,mouse_y)-24+random(48),5+random(3)) // Set in motion
+		motion_add(other.gunangle-24+random(48),5+random(3)) // Set in motion
 		image_angle = direction // set image angle
 		team = other.team // Set team
 		sprite_index = global.sprMiniPlasma // Set sprite
