@@ -28,10 +28,10 @@ sound_play(sndRocket); //Fire sound
 fireAngle = -45+random(6)-3 //Angle variable
 repeat(10) //Fire 10 times
 {
-    with instance_create(x,y,Rocket)
+    with instance_create(x+lengthdir_x(10,gunangle), y+lengthdir_y(10,gunangle),Rocket)
 	{
 		creator = other // Set Creator
-		motion_add(point_direction(x,y,mouse_x,mouse_y)+other.fireAngle*other.accuracy,2) //Add motion
+		motion_add(other.gunangle+other.fireAngle*other.accuracy,2) //Add motion
 		image_angle = direction // Set image angle
 		team = other.team // Set team
 	}
