@@ -42,4 +42,4 @@ repeat(4) //Fire 4 times
 	}
     fireAngle += 10 //Change fire angle
 }
-wkick = 13;
+weapon_post(13, -8, 3);
