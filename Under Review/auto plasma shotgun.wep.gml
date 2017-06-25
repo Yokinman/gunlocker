@@ -1,10 +1,10 @@
 #define init
-global.sprPlasmaShotgun = sprite_add_weapon("../Sprites/Plasma/PlasmaShotgun.png", 5, 5);
+global.sprAutoPlasmaShotgun = sprite_add_weapon("../Sprites/Plasma/AutoPlasmaShotgun.png", 5, 5);
 global.sprMiniPlasma = sprite_add("../Sprites/Projectiles/Plasma/MiniPlasma.png", 2, 6, 6);
 global.sprMiniPlasmaExplode = sprite_add("../Sprites/Projectiles/Plasma/MiniPlasmaExplode.png", 7, 12, 12);
 
 #define weapon_name
-return "PLASMA SHOTGUN"; // Name 
+return "AUTO PLASMA SHOTGUN"; // Name 
 
 #define weapon_type
 return 5; // Energy Wep
@@ -13,16 +13,19 @@ return 5; // Energy Wep
 return 5; // 5 Ammo
 
 #define weapon_area
-return 9; // L0 5-1+
+return 11; // L0 5-3+
 
 #define weapon_load
-return 38; // 1.26 Seconds
+return 12; // 0.40 Seconds
 
 #define weapon_sprt
-return global.sprPlasmaShotgun; // Wep Sprite
+return global.sprAutoPlasmaShotgun; // Wep Sprite
 
 #define weapon_swap
 return sndSwapEnergy; // Swap Sound
+
+#define weapon_auto
+return 1; // Automatic
 
 #define weapon_fire
  // Sound:
@@ -32,7 +35,7 @@ if(skill_get(17)) {
 	sound_play(sndPlasmaRifle)
 }
 
-repeat(5) {
+repeat(4) {
 	with instance_create(x+lengthdir_x(4, gunangle),y+lengthdir_y(4, gunangle),CustomProjectile) {
 		typ = 2 // Destructable
 		image_speed = 0 // Set animation speed

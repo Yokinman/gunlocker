@@ -1,25 +1,25 @@
 #define init
-global.sprPlasmaShotgun = sprite_add_weapon("../Sprites/Plasma/PlasmaShotgun.png", 5, 5);
+global.sprDoublePlasmaShotgun = sprite_add_weapon("../Sprites/Plasma/DoublePlasmaShotgun.png", 5, 5);
 global.sprMiniPlasma = sprite_add("../Sprites/Projectiles/Plasma/MiniPlasma.png", 2, 6, 6);
 global.sprMiniPlasmaExplode = sprite_add("../Sprites/Projectiles/Plasma/MiniPlasmaExplode.png", 7, 12, 12);
 
 #define weapon_name
-return "PLASMA SHOTGUN"; // Name 
+return "DOUBLE PLASMA SHOTGUN"; // Name 
 
 #define weapon_type
 return 5; // Energy Wep
 
 #define weapon_cost
-return 5; // 5 Ammo
+return 10; // 10 Ammo
 
 #define weapon_area
-return 9; // L0 5-1+
+return 11; // L0 5-3+
 
 #define weapon_load
-return 38; // 1.26 Seconds
+return 46; // 1.53 Seconds
 
 #define weapon_sprt
-return global.sprPlasmaShotgun; // Wep Sprite
+return global.sprDoublePlasmaShotgun; // Wep Sprite
 
 #define weapon_swap
 return sndSwapEnergy; // Swap Sound
@@ -32,13 +32,13 @@ if(skill_get(17)) {
 	sound_play(sndPlasmaRifle)
 }
 
-repeat(5) {
+repeat(10) {
 	with instance_create(x+lengthdir_x(4, gunangle),y+lengthdir_y(4, gunangle),CustomProjectile) {
 		typ = 2 // Destructable
 		image_speed = 0 // Set animation speed
 		name = "miniplasma" // Set name for compatability
 		creator = other // Set creator
-		motion_add(other.gunangle-24+random(48),5+random(3)) // Set in motion
+		motion_add(other.gunangle-32+random(64),5+random(3)) // Set in motion
 		image_angle = direction // set image angle
 		team = other.team // Set team
 		sprite_index = global.sprMiniPlasma // Set sprite
