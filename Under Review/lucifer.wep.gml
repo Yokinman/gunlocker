@@ -26,12 +26,16 @@ return sndSwapDragon; // Swap Sound
 return 1; // Automatic
 
 #define weapon_fire
-wkick = 4
-
-//INSERT GOOD CODE THAT FIXES SOUND HERE PLEASE
-
-repeat(6) {
-	if instance_exists(self) {
+if instance_exists(self) {
+	if button_pressed(index, "fire") {
+		sound_play(sndDragonStart)
+	}
+	if button_check(index, "fire") {
+		sound_play(sndDragonLoop)
+	}
+	
+	repeat(6) {
+		weapon_post(6,-6,6)
 		fireAngle = -7.5-2+random(4)
 		repeat(4) {
 			repeat(3)
@@ -45,7 +49,11 @@ repeat(6) {
 			}
 			fireAngle += 5
 		}
+		wait(1);
 	}
-	wait 1;
-	wkick = 4
+	if !button_check(index, "fire") || ammo[4] = 0 {
+		sound_play(sndDragonStop)
+		sound_stop(sndDragonLoop)
+	}
 }
+

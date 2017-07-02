@@ -35,7 +35,7 @@ weapon_post(8, -15, 5);
 fireAngle = -15 * other.accuracy;
 repeat(4){
     with instance_create(x,y,Bolt){ // Bolts
-		motion_add(point_direction(x,y,mouse_x[other.index],mouse_y[other.index])+other.fireAngle-2+random(4)*other.accuracy,24)
+		motion_add(other.gunangle+other.fireAngle-2+random(4)*other.accuracy,24)
 		image_angle = direction;
 		sprite_index = global.sprAlphaBolt
 		team = other.team;
@@ -43,7 +43,5 @@ repeat(4){
 	}
 	fireAngle += (10 * other.accuracy);
 }
-
-wkick = 7
 
 motion_add(gunangle - 180, 1.5); // Push Player Backwards
