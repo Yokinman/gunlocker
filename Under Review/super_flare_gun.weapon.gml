@@ -1,5 +1,5 @@
 #define init
-sprSuperFlareGun = sprite_add_weapon("iVBORw0KGgoAAAANSUhEUgAAABUAAAAOCAYAAADABlfOAAAABmJLR0QAAAAAAAD5Q7t/AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAAB3RJTUUH4AsHACIl3CEq7QAAAOFJREFUOMtjYKABYKSCGf/RzWQhQyOyQ/77hMXCOVtWLWZgYGBgYCFgKwMDAwNDrSKC3XwfVY28ijqGehZctjIwMDA8efSAwfflYYYACVRNzfcZGHzCYuEuQwdMMAMNLGwxJKUvHsaqyZsTQqM7AptLGZ48esAgI6cAZ0szMDCce4GqAcZ/8ugBzgjAiCiY4gsnDjNcgIYnNu8bQNVYO7kTNhRmIDSW/zMwMDBseIFTDcPDOzeJMxQdILsUyQJGXKmFEU9a/I8jSaHrxUj8jGTkGGw58T+yGCOFWZKa2R0/AAD47kbWoYhMAgAAAABJRU5ErkJggg==", 4, 6);
+global.sprSuperFlareGun = sprite_add_weapon("../Sprites/Flame/SuperFlareGun.png", 4, 6);
 
 #define weapon_name
 return "SUPER FLARE GUN"; // Name
@@ -36,7 +36,7 @@ repeat (5)
 	spread += 10 * accuracy;
 }
 sound_play(sndFlare);
-wkick = 7;
+weapon_post(8,-10,10)
 
 #define weapon_sprt
-return sprSuperFlareGun; // Wep Sprite
+return global.sprSuperFlareGun; // Wep Sprite

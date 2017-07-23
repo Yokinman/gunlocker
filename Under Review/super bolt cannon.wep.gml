@@ -10,7 +10,7 @@ return "SUPER BOLT CANNON"
 return 3; //Bolt ammo
 
 #define weapon_cost
-return 26;
+return 18; // previusly costed 26 ammo
 
 #define weapon_area
 return 14; // 7-1

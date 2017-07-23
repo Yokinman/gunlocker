@@ -1,7 +1,7 @@
 #define init
 global.sprSuperFlakthrower = sprite_add_weapon("../Sprites/FlameShell/SuperFlakthrower.png", 3, 5)
 global.sprFlameFlak = sprite_add("../Sprites/Projectiles/FlameShell/FlameFlak.png", 2, 8, 8);
-global.sprSuperFlameFlak =  sprite_add("../Sprites/Projectiles/FlameShell/SuperFlameFlak.png", 2, 16, 16);
+global.sprSuperFlameFlak =  sprite_add("../Sprites/Projectiles/FlameShell/SuperFlameFlak.png", 2, 12, 12);
 
 #define weapon_name
 return "SUPER FLAKTHROWER"; // Name

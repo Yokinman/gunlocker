@@ -13,7 +13,19 @@ return "SEEKER CANNON";
 return global.sprSeekerCannon;
 
 #define weapon_type
-return 3;
+return 3; // Bolt weapon
+
+#define weapon_cost
+return 8; // 8 Ammo
+
+#define weapon_load
+return 26; // 0.87 Seconds
+
+#define weapon_area
+return 10; // L0 5-2+
+
+#define weapon_swap
+return sndSwapBow; // Swap sound
 
 #define weapon_fire
 sound_play(sndSeekerShotgun);

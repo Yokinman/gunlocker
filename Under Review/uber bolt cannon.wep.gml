@@ -10,7 +10,7 @@ return "UBER BOLT CANNON"
 return 3; //Bolt ammo
 
 #define weapon_cost
-return 48;
+return 36; // previusly costed 48 ammo
 
 #define weapon_area
 return 17; // L1 0-1
