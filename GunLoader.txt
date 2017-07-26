@@ -1,91 +1,112 @@
-				   /loadtext mods\Gunlocker\GunLoader
-			              Load this file for every single weapon in the mod!
---------------------------------------------------------------------------------------------------------------------------------------------
+                  /loadtext Gunlocker\GunLoader
+   Load this file for every single weapon in the mod!
+ ------------------------------------------------------------
+/loadmod gunlocker\gunlocker_tools
+
 Bazooka:
-/loadwep mods\gunlocker\bazooka\bazooka cannon
-/loadwep mods\gunlocker\bazooka\hyper bazooka
+/loadmod gunlocker\bazooka\bazooka_tools
+/loadwep gunlocker\bazooka\bazooka cannon
+/loadwep gunlocker\bazooka\hyper bazooka
 
 Blood:
-/loadwep mods\gunlocker\blood\assault blood launcher
+/loadwep gunlocker\blood\assault blood launcher
 
 Bolt:
-/loadwep mods\gunlocker\bolt\assault crossbow
-/loadwep mods\gunlocker\bolt\auto toxic bow
-/loadwep mods\gunlocker\bolt\hyper crossbow
-/loadwep mods\gunlocker\bolt\minibow
-/loadwep mods\gunlocker\bolt\toxic minibow
+/loadmod gunlocker\bolt\bolt_tools
+/loadwep gunlocker\bolt\assault crossbow
+/loadwep gunlocker\bolt\auto toxic bow
+/loadwep gunlocker\bolt\hyper crossbow
+/loadwep gunlocker\bolt\minibow
+/loadwep gunlocker\bolt\toxic minibow
 
 Bouncer:
-/loadwep mods\gunlocker\bouncer\bouncer assault rifle
-/loadwep mods\gunlocker\bouncer\bouncer gun
-/loadwep mods\gunlocker\bouncer\bouncer rifle
+/loadmod gunlocker\bouncer\bouncer_tools
+/loadwep gunlocker\bouncer\bouncer assault rifle
+/loadwep gunlocker\bouncer\bouncer cannon
+/loadwep gunlocker\bouncer\bouncer gun
+/loadwep gunlocker\bouncer\bouncer rifle
 
 Bullet:
-/loadwep mods\gunlocker\bullet\bullgun
-/loadwep mods\gunlocker\bullet\double bullgun
+/loadwep gunlocker\bullet\bullgun
+/loadwep gunlocker\bullet\double bullgun
 
 Disc:
-/loadwep mods\gunlocker\disc\auto disc gun
-/loadwep mods\gunlocker\disc\disc minigun
-/loadwep mods\gunlocker\disc\hyper disc gun
+/loadmod gunlocker\disc\disc_tools
+/loadwep gunlocker\disc\auto disc gun
+/loadwep gunlocker\disc\disc minigun
+/loadwep gunlocker\disc\hyper disc gun
 
 Flame:
-/loadwep mods\gunlocker\flame\auto flare gun
+/loadwep gunlocker\flame\auto flare gun
 
 Flame Shell:
-/loadwep mods\gunlocker\flameshell\bonfire
-/loadwep mods\gunlocker\flameshell\campfire
-/loadwep mods\gunlocker\flameshell\flakthrower
-/loadwep mods\gunlocker\flameshell\scorcher
-/loadwep mods\gunlocker\flameshell\toaster
-/loadwep mods\gunlocker\flameshell\vaporizer
-/loadwep mods\gunlocker\flameshell\welder
+/loadmod gunlocker\flameshell\flameshell_tools
+/loadwep gunlocker\flameshell\bonfire
+/loadwep gunlocker\flameshell\campfire
+/loadwep gunlocker\flameshell\flakthrower
+/loadwep gunlocker\flameshell\scorcher
+/loadwep gunlocker\flameshell\toaster
+/loadwep gunlocker\flameshell\vaporizer
+/loadwep gunlocker\flameshell\welder
 
 Grenade:
-/loadwep mods\gunlocker\grenade\alpha launcher
-/loadwep mods\gunlocker\grenade\assault launcher
-/loadwep mods\gunlocker\grenade\grenade cannon
-/loadwep mods\gunlocker\grenade\mega launcher
-/loadwep mods\gunlocker\grenade\super launcher
+/loadmod gunlocker\grenade\grenade_tools
+/loadwep gunlocker\grenade\alpha launcher
+/loadwep gunlocker\grenade\assault launcher
+/loadwep gunlocker\grenade\grenade cannon
+/loadwep gunlocker\grenade\mega launcher
+/loadwep gunlocker\grenade\super launcher
+
+Heavy Bolt:
+/loadwep gunlocker\heavybolt\super heavy crossbow
 
 Heavy Bullet:
-/loadwep mods\gunlocker\heavybullet\double heavy bullgun
-/loadwep mods\gunlocker\heavybullet\double heavy minigun
-/loadwep mods\gunlocker\heavybullet\heavy bullgun
-/loadwep mods\gunlocker\heavybullet\heavy hyper rifle
-/loadwep mods\gunlocker\heavybullet\heavy minigun
-/loadwep mods\gunlocker\heavybullet\heavy smg
+/loadwep gunlocker\heavybullet\double heavy bullgun
+/loadwep gunlocker\heavybullet\double heavy minigun
+/loadwep gunlocker\heavybullet\heavy bullgun
+/loadwep gunlocker\heavybullet\heavy hyper rifle
+/loadwep gunlocker\heavybullet\heavy minigun
+/loadwep gunlocker\heavybullet\heavy smg
 
 Heavy Grenade:
-/loadwep mods\gunlocker\heavygrenade\heavy assault launcher
+/loadwep gunlocker\heavygrenade\heavy assault launcher
 
 Heavy Slug:
-/loadwep mods\gunlocker\heavyslug\heavy gatling slugger
+/loadwep gunlocker\heavyslug\heavy gatling slugger
+/loadwep gunlocker\heavyslug\heavy turbo slugger
 
 Laser:
-/loadwep mods\gunlocker\laser\assault laser rifle
-/loadwep mods\gunlocker\laser\laser shotgun
-/loadwep mods\gunlocker\laser\super laser cannon
+/loadmod gunlocker\laser\laser_tools
+/loadwep gunlocker\laser\assault laser rifle
+/loadwep gunlocker\laser\laser shotgun
+/loadwep gunlocker\laser\super laser cannon
 
 Melee:
-/loadwep mods\gunlocker\melee\hyper\hyper hammer
-/loadwep mods\gunlocker\melee\hyper\hyper jackhammer
+/loadmod gunlocker\melee\melee_tools
+/loadwep gunlocker\melee\hyper\hyper hammer
+/loadwep gunlocker\melee\hyper\hyper jackhammer
 
 Nuke:
-/loadwep mods\gunlocker\nuke\hyper nuke launcher
+/loadmod gunlocker\nuke\nuke_tools
+/loadwep gunlocker\nuke\hyper nuke launcher
 
 Plasma:
-/loadwep mods\gunlocker\plasma\hyper plasma rifle
+/loadmod gunlocker\plasma\plasma_tools
+/loadwep gunlocker\plasma\hyper plasma rifle
 
 Seeker:
-/loadwep mods\gunlocker\seeker\auto seeker shotgun
+/loadwep gunlocker\seeker\auto seeker shotgun
+/loadwep gunlocker\seeker\double seeker minigun
+/loadwep gunlocker\seeker\seeker minigun
 
 Shell:
-/loadwep mods\gunlocker\shell\pop pistol
-/loadwep mods\gunlocker\shell\pop minigun
+/loadwep gunlocker\shell\pop minigun
+/loadwep gunlocker\shell\pop pistol
 
 Slug:
-/loadwep mods\gunlocker\slug\alpha slugger
+/loadwep gunlocker\slug\alpha slugger
+/loadwep gunlocker\slug\nitro slugger
+/loadwep gunlocker\slug\turbo slugger
 
 Splinter:
-/loadwep mods\gunlocker\splinter\porcupine
+/loadwep gunlocker\splinter\porcupine

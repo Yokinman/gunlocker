@@ -1,44 +1,44 @@
 #define init 
-global.sprCampfireGun = sprite_add_weapon("../Sprites/FlameShell/Campfire.png",4,4);
+	global.sprCampfireGun = sprite_add_weapon("../Sprites/FlameShell/Campfire.png", 4, 4);
 
 #define weapon_name
-return "CAMPFIRE"; // Name
+	return "CAMPFIRE"; // Name
 
 #define weapon_type
-return 1; // Bullet Wep
-
-#define weapon_cost
-return 1; // 1 Ammo
+	return 1; // Bullet Wep
 
 #define weapon_area
-return 13; // L0 6-1+
-
-#define weapon_load
-return 1; // 0.03 Seconds
+	return 13; // L0 6-1+
 
 #define weapon_auto
-return 1; // Automatic
+	return 1; // Automatic
 
 #define weapon_swap
-return sndSwapMachinegun; // Swap Sound
+	return sndSwapMachinegun; // Swap Sound
 
 #define weapon_fire
-sound_play(sndMinigun); // Sound
-weapon_post(5, -6, 6);
+	sound_play(sndMinigun);				// Sound
+	weapon_post(5, -6, 6);				// Kick, Shift, Shake
+	motion_add(gunangle + 180, 0.5);	// Knockback
 
-with instance_create(x,y,Shell){ // Empty Bullet Casing
-	motion_add(other.gunangle + other.right*100 + random_range(-30,30),2+random(3))
-}
-with instance_create(x+lengthdir_x(2,gunangle), y+lengthdir_y(2, gunangle),FlameShell){ // Flame Shell
-	motion_add(other.gunangle + (random_range(-16, 16) * other.accuracy),14+random(2))
-	team = other.team;
-	creator = other;
-}
+	 // Empty Bullet Casing:
+	scrShells(100, 30, 2 + random(3), sprBulletShell);
 
-motion_add(gunangle - 180, 0.4); // Push Player Backwards A Bit
+	 // Flame Shell:
+	with instance_create(x,y,FlameShell){
+		move_contact_solid(other.gunangle, 2);
+		motion_add(other.gunangle + (random_range(-16, 16) * other.accuracy), 14 + random(2));
+		image_angle = direction;
+		hitid = [sprite_index, "FLAME SHELL"];
+		team = other.team;
+		creator = other;
+	}
+
+#define scrShells(_angle, _spread, _speed, _sprite)
+	mod_script_call("mod", "gunlocker_tools", "scrShells", _angle, _spread, _speed, _sprite);
 
 #define weapon_sprt
-return global.sprCampfireGun; // Wep Sprite
+	return global.sprCampfireGun; // Wep Sprite
 
 #define weapon_text
-return "MELT DOWN"; // Loading Tip
+	return "SECOND DEGREE BURNS"; // Loading Tip

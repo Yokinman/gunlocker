@@ -1,55 +1,53 @@
 #define init
-global.sprAssaultBloodLauncher = sprite_add_weapon("../Sprites/Blood/AssaultBloodLauncher.png", 4, 7);
+	global.sprAssaultBloodLauncher = sprite_add_weapon("../Sprites/Blood/AssaultBloodLauncher.png", 4, 7);
 
 #define weapon_name
-return "ASSAULT BLOOD LAUNCHER"; // Name
+	return "ASSAULT BLOOD LAUNCHER"; // Name
 
 #define weapon_type
-return 4; // Explosive Wep
+	return 4; // Explosive Wep
 
 #define weapon_cost
-return 0; // No Ammo, For Blood Purposes
+	return 0; // No ammo, for blood purposes
 
 #define weapon_load
-return 23; // 0.77 Seconds
+	return 23; // 0.77 Seconds
 
 #define weapon_auto
-with(Player) if(wep = "assault blood launcher"){
-	if(ammo[weapon_get_type(wep)] < 3) return 0; // Not Automatic When Out Of Ammo
-	else return 1; // Automatic Otherwise
-}
+	if(ammo[weapon_get_type(argument0)] < 3) return 0;	// Not Automatic When Out Of Ammo
+	else return 1;										// Automatic Otherwise
 
 #define weapon_area
-return 10; // L0 5-1+
+	return 10; // L0 5-1+
 
 #define weapon_swap
-return sndSwapExplosive; // Swap sound
+	return sndSwapExplosive; // Swap sound
 
 #define weapon_fire
- // Use Health In Place Of Ammo, When Out Of Ammo:
-if(ammo[weapon_get_type(wep)] < 3){
-	my_health -= 2;
-	image_index = 0;
-	sprite_index = spr_hurt;
-	sound_play(snd_hurt);
-	sound_play(sndBloodHurt);
-	ammo[weapon_get_type(wep)] += 3;
-}
-ammo[weapon_get_type(wep)] -= 3;
-
-repeat(3) if instance_exists(self){ // Blood Nades
-	sound_play(sndBloodLauncher); // Sound
-	weapon_post(6, -6, 6);
-	
-	with instance_create(x, y, BloodGrenade){ // Blood Nades
-		motion_add(other.gunangle + (random_range(-6, 6) * other.accuracy), 10);
-		image_angle = direction;
-		team = other.team;
-		creator = other;
+	 // HP Ammo:
+	if(ammo[weapon_get_type(argument0)] < 3){
+		sound_play(sndBloodHurt);
+		projectile_hit(self, 2, 0, 0);
+		lasthit = [weapon_get_sprite(argument0), weapon_get_name(argument0)];
+		ammo[4] += 3;
 	}
-	
-	wait 4;
-}
+	if(infammo = 0) ammo[weapon_get_type(argument0)] -= 3;
+
+	repeat(3) if instance_exists(self){
+		sound_play(sndBloodLauncher);	// Sound
+		weapon_post(6, -6, 6);			// Kick, Shift, Shake
+		
+		 // Blood Nades:
+		with instance_create(x, y, BloodGrenade){
+			motion_add(other.gunangle + (random_range(-6, 6) * other.accuracy), 10);
+			image_angle = direction;
+			hitid = [sprite_index, "BLOOD GRENADE"];
+			team = other.team;
+			creator = other;
+		}
+		
+		wait 4;
+	}
 
 #define weapon_sprt
-return global.sprAssaultBloodLauncher; // Wep Sprite
+	return global.sprAssaultBloodLauncher; // Wep Sprite
