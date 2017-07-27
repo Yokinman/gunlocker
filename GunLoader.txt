@@ -57,7 +57,6 @@ Flame Shell:
 
 Grenade:
 /loadmod gunlocker\grenade\grenade_tools
-/loadwep gunlocker\grenade\alpha launcher
 /loadwep gunlocker\grenade\assault launcher
 /loadwep gunlocker\grenade\grenade cannon
 /loadwep gunlocker\grenade\mega launcher
@@ -110,7 +109,6 @@ Shell:
 /loadwep gunlocker\shell\pop pistol
 
 Slug:
-/loadwep gunlocker\slug\alpha slugger
 /loadwep gunlocker\slug\nitro slugger
 /loadwep gunlocker\slug\turbo slugger
 
