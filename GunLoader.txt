@@ -5,6 +5,7 @@
 
 Bazooka:
 /loadmod gunlocker\bazooka\bazooka_tools
+/loadwep gunlocker\bazooka\assault bazooka
 /loadwep gunlocker\bazooka\bazooka cannon
 /loadwep gunlocker\bazooka\hyper bazooka
 
@@ -25,6 +26,8 @@ Bouncer:
 /loadwep gunlocker\bouncer\bouncer cannon
 /loadwep gunlocker\bouncer\bouncer gun
 /loadwep gunlocker\bouncer\bouncer rifle
+/loadwep gunlocker\bouncer\quadruple bouncer machinegun
+/loadwep gunlocker\bouncer\triple bouncer machinegun
 
 Bullet:
 /loadwep gunlocker\bullet\bullgun
@@ -32,9 +35,12 @@ Bullet:
 
 Disc:
 /loadmod gunlocker\disc\disc_tools
+/loadwep gunlocker\disc\assault disc gun
 /loadwep gunlocker\disc\auto disc gun
 /loadwep gunlocker\disc\disc minigun
 /loadwep gunlocker\disc\hyper disc gun
+/loadwep gunlocker\disc\quadruple disc gun
+/loadwep gunlocker\disc\triple disc gun
 
 Flame:
 /loadwep gunlocker\flame\auto flare gun
