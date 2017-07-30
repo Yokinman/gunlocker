@@ -34,4 +34,4 @@
 	return global.sprSuperLaserCannon; // Wep Sprite
 
 #define weapon_text
-	return "FIRE WHEN READY"; // Loading Tip
+	return "YOU MAY FIRE WHEN READY"; // Loading Tip

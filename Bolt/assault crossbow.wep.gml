@@ -14,7 +14,7 @@
 	return 7; // L0 3-2+
 
 #define weapon_load
-	return 26; // 0.86 Seconds
+	return 37; // 1.23 Seconds
 
 #define weapon_swap
 	return sndSwapBow; // Swap Sound

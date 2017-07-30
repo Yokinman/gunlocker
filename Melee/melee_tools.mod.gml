@@ -206,18 +206,11 @@
 
 		 // Hold on for dear life:
 		if(!place_meeting(x,y,Portal) && fork()){
-			if("sprite_angle" in self){
-				var _ang = sprite_angle;
-				sprite_angle = direction - 90;
-				wait 1;
-				if(instance_exists(self)) sprite_angle = _ang;
-			}
-			else{
-				var _ang = image_angle;
-				image_angle = direction - 90;
-				wait 1;
-				if(instance_exists(self)) image_angle = _ang;
-			}
+			var _ang = "image_angle";
+			if("sprite_angle" in self) _ang = "sprite_angle";
+			variable_instance_set(id, _ang, direction - 90);
+			wait 1;
+			if(instance_exists(self)) variable_instance_set(id, _ang, 0);
 			exit;
 		}
 	}

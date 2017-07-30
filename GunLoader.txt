@@ -26,8 +26,8 @@ Bouncer:
 /loadwep gunlocker\bouncer\bouncer cannon
 /loadwep gunlocker\bouncer\bouncer gun
 /loadwep gunlocker\bouncer\bouncer rifle
-/loadwep gunlocker\bouncer\quadruple bouncer machinegun
-/loadwep gunlocker\bouncer\triple bouncer machinegun
+/loadwep gunlocker\bouncer\quadruple bouncer rifle
+/loadwep gunlocker\bouncer\triple bouncer rifle
 
 Bullet:
 /loadwep gunlocker\bullet\bullgun
@@ -44,6 +44,9 @@ Disc:
 
 Flame:
 /loadwep gunlocker\flame\auto flare gun
+/loadwep gunlocker\flame\boiler
+/loadwep gunlocker\flame\pyromania
+/loadwep gunlocker\flame\pyrophobia
 
 Flame Shell:
 /loadmod gunlocker\flameshell\flameshell_tools
@@ -63,6 +66,7 @@ Grenade:
 /loadwep gunlocker\grenade\super launcher
 
 Heavy Bolt:
+/loadwep gunlocker\heavybolt\heavy assault crossbow
 /loadwep gunlocker\heavybolt\super heavy crossbow
 
 Heavy Bullet:
@@ -72,11 +76,13 @@ Heavy Bullet:
 /loadwep gunlocker\heavybullet\heavy hyper rifle
 /loadwep gunlocker\heavybullet\heavy minigun
 /loadwep gunlocker\heavybullet\heavy smg
+/loadwep gunlocker\heavybullet\triple heavy machinegun
 
 Heavy Grenade:
 /loadwep gunlocker\heavygrenade\heavy assault launcher
 
 Heavy Slug:
+/loadwep gunlocker\heavyslug\heavy assault slugger
 /loadwep gunlocker\heavyslug\heavy gatling slugger
 /loadwep gunlocker\heavyslug\heavy turbo slugger
 
@@ -84,7 +90,15 @@ Laser:
 /loadmod gunlocker\laser\laser_tools
 /loadwep gunlocker\laser\assault laser rifle
 /loadwep gunlocker\laser\laser shotgun
+/loadwep gunlocker\laser\quadruple laser rifle
 /loadwep gunlocker\laser\super laser cannon
+/loadwep gunlocker\laser\triple laser rifle
+
+Lightning:
+/loadwep gunlocker\lightning\assault lightning rifle
+/loadwep gunlocker\lightning\double lightning minigun
+/loadwep gunlocker\lightning\lightning machinegun
+/loadwep gunlocker\lightning\lightning minigun
 
 Melee:
 /loadmod gunlocker\melee\melee_tools
@@ -93,20 +107,27 @@ Melee:
 
 Nuke:
 /loadmod gunlocker\nuke\nuke_tools
+/loadwep gunlocker\nuke\assault nuke launcher
 /loadwep gunlocker\nuke\hyper nuke launcher
 
 Plasma:
 /loadmod gunlocker\plasma\plasma_tools
 /loadwep gunlocker\plasma\hyper plasma rifle
+/loadwep gunlocker\plasma\quadruple plasma rifle
+/loadwep gunlocker\plasma\triple plasma rifle
 
 Seeker:
+/loadwep gunlocker\seeker\assault seeker rifle
 /loadwep gunlocker\seeker\auto seeker shotgun
 /loadwep gunlocker\seeker\double seeker minigun
+/loadwep gunlocker\seeker\double seeker shotgun
 /loadwep gunlocker\seeker\seeker minigun
 
 Shell:
 /loadwep gunlocker\shell\pop minigun
 /loadwep gunlocker\shell\pop pistol
+/loadwep gunlocker\shell\quadruple pop gun
+/loadwep gunlocker\shell\triple pop gun
 
 Slug:
 /loadwep gunlocker\slug\nitro slugger

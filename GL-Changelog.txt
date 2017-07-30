@@ -1,0 +1,82 @@
+7/26/2017 | v1.0 + First Public Release:
+	+ Hyper Bazooka
+	+ Bazooka Cannon
+	+ Assault Blood Launcher
+	+ Auto Toxic Bow
+	+ Assault Crossbow
+	+ Minibow
+	+ Toxic Minibow
+	+ Hyper Crossbow
+	+ Bouncer Gun
+	+ Bouncer Rifle
+	+ Bouncer Assault Rifle
+	+ Bouncer Cannon
+	+ Bullgun
+	+ Double Bullgun
+	+ Auto Disc Gun
+	+ Disc Minigun
+	+ Hyper Disc Gun
+	+ Auto Flare Gun
+	+ Scorcher
+	+ Toaster
+	+ Welder
+	+ Campfire
+	+ Bonfire
+	+ Vaporizer
+	+ Assault Launcher
+	+ Super Launcher
+	+ Mega Launcher
+	+ Grenade Cannon
+	+ Super Heavy Crossbow
+	+ Heavy SMG
+	+ Heavy Bullgun
+	+ Double Heavy Bullgun
+	+ Heavy Minigun
+	+ Double Heavy Minigun
+	+ Heavy Hyper Rifle
+	+ Heavy Assault Launcher
+	+ Heavy Gatling Slugger
+	+ Heavy Turbo Slugger
+	+ Assault Laser Rifle
+	+ Laser Shotgun
+	+ Super Laser Cannon
+	+ Hyper Jackhammer
+	+ Hyper Hammer
+	+ Hyper Nuke Launcher
+	+ Hyper Plasma Rifle
+	+ Auto Seeker Shotgun
+	+ Seeker Minigun
+	+ Double Seeker Minigun
+	+ Pop Pistol
+	+ Pop Minigun
+	+ Turbo Slugger
+	+ Nitro Slugger
+	+ Porcupine
+
+7/30/2017 | v1.1 + Added Blaac's Weapons
+	+ Assault Bazooka
+	+ Triple Bouncer Rifle
+	+ Quadruple Bouncer Rifle
+	+ Assault Disc Gun
+	+ Triple Disc Gun
+	+ Quadruple Disc Gun
+	+ Boiler
+	+ Pyromania
+	+ Pyrophobia
+	+ Heavy Assault Crossbow
+	+ Heavy Triple Machinegun
+	+ Heavy Assault Slugger
+	+ Triple Laser Rifle
+	+ Quadruple Laser Rifle
+	+ Lightning Machinegun
+	+ Assault Lightning Rifle
+	+ Lightning Minigun
+	+ Double Lightning Minigun
+	+ Assault Nuke Launcher
+	+ Triple Plasma Rifle
+	+ Quadruple Plasma Rifle
+	+ Assault Seeker Rifle
+	+ Double Seeker Shotgun
+	+ Triple Pop Gun
+	+ Quadruple Pop Gun
+	* Fixed Hyper Jackhammer bug causing player to become rotated.
