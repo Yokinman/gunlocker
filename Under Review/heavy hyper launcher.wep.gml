@@ -39,7 +39,7 @@ with instance_create(x+lengthdir_x(8,other.gunangle),y+lengthdir_y(8,other.gunan
 	team = other.team
 	typ = 1 
 	
-	on_destroy = "hhn_die"
+	on_destroy = hhn_die
 	
 	while(instance_exists(self)) {
 				
