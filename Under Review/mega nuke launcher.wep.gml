@@ -32,25 +32,11 @@ repeat(8) //Fire 4 times
 	if(fork()) {
 		with instance_create(x,y,Nuke)
 		{
+			index = other.index
 			motion_add(other.gunangle+other.fireAngle*other.accuracy,2) // Set motion
 			creator = other // Set creator
 			image_angle = direction // Set image angle
 			team = other.team // Set team
-			active = 0;
-			wait 8; 
-			if instance_exists(self) { // For some reason "active = 1" doesn't work. This is a replacement
-				active = 1;
-				while(instance_exists(self)) {
-					if speed > 5
-					speed = 5
-
-					motion_add(point_direction(x,y,mouse_x,mouse_y),0.5)
-					motion_add(direction,0.5)
-					image_angle = direction
-					
-					wait 1; 
-				}
-			}
 		}
 		exit;
 	}

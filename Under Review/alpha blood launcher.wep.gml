@@ -33,7 +33,7 @@
 	if(infammo = 0) ammo[weapon_get_type(argument0)] -= 5;
 
 	fireAngle = -15+random_range(-8,8)
-	repeat(4) if instance_exists(self){
+	repeat(4) {
 		sound_play(sndBloodLauncher);	// Sound
 		weapon_post(10, -15, 12);			// Kick, Shift, Shake
 		

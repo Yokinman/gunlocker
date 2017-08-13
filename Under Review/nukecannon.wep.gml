@@ -23,6 +23,16 @@ return 13; // L0 7-1+
 #define weapon_swap
 return sndSwapExplosive; // Swap sound
 
+#define nuke_draw
+	 // Draw Rocket Flame:
+	if(active){
+		draw_sprite_ext(sprRocketFlame, -1, x - lengthdir_x(4,image_angle), y - lengthdir_y(4,image_angle), 1, 1.2, image_angle, c_white, image_alpha);
+		draw_set_blend_mode(bm_add);
+		draw_sprite_ext(sprRocketFlame, 0, x, y, 2 * image_xscale, 2 * image_yscale, image_angle, c_white, 0.1);
+	}
+	draw_set_blend_mode(bm_normal);
+	draw_self();
+
 #define nuke_hit
 //Damage the enemy but blow up
 if other.team != team {
@@ -44,8 +54,8 @@ instance_create(x,y,Smoke)
 if speed > 5
 speed = 5
 
-motion_add(point_direction(x,y,mouse_x[creator.index],mouse_y[creator.index]),0.1) //Can be controlled
-motion_add(direction,0.1)
+motion_add(point_direction(x,y,mouse_x[creator.index],mouse_y[creator.index]),0.3) //Can be controlled
+motion_add(direction,0.3)
 }
 
 image_angle = direction
@@ -92,6 +102,7 @@ with (instance_create(x+lengthdir_x(8, other.gunangle),y+lengthdir_y(8, other.gu
 	on_hit = nuke_hit;
 	on_step = nuke_step;
 	on_destroy = nuke_destroy;
+	on_draw = nuke_draw;
 	wait 8; //Wait
 	if instance_exists(self) { //If it hasn't blown up
 		active = 1; // Can now be controlled
